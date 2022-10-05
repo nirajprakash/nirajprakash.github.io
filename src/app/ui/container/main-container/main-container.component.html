@@ -1,0 +1,86 @@
+<div class="main tb-height--full junkie">
+    <mat-toolbar [@transitionFromTop]="{value:'in', params: {animDelay: 200}}" 
+    (@transitionFromTop.done)='_onToolbarAnimationEnd($event)'
+    appWidgetWaterfall [waterfallReferenceTarget]="contentScroller"
+        waterfallReferenceLink="dashboard-content" waterfallActiveClass="active"
+        class="junkie-top-nav tb-position--absolute tb-width--full tb-z-index--3 tb-padding--v-4">
+        <mat-toolbar-row>
+            <a class="tb-a--unset" matRipple routerLink="/">
+                <div ngClass.gt-xs="logo_area tb-padding--8-24" ngClass.xs="logo_area tb-padding--0" fxLayout="row"
+                    fxLayoutAlign="start center" fxLayoutGap="12px">
+                    <!-- <div class="tb-height--32"> -->
+                    <img class="image logo" src="assets/svg/logo/logo_name.svg">
+                    <!-- </div> -->
+                    <!-- <h4 class="tb-typo--h4 tb-color--black">Junkie Labs</h4> -->
+                </div>
+            </a>
+        </mat-toolbar-row>
+
+        <mat-toolbar-row fxFlex fxHide.lt-md fxLayoutAlign="center center">
+            <!-- <a matRipple
+                class="tb-a--unset tb-flex--justify-center tb-typo--h5 tb-font-weight--medium tb-color--grey-500 tb-padding--8-36-i tb-cursor--pointer"
+                ngClass.xs="tb-padding--h-16-i">
+                Contact
+            </a> -->
+            <!-- <a matRipple
+                class="tb-a--unset tb-flex--justify-center tb-typo--h5 tb-font-weight--medium tb-color--grey-500 tb-padding--8-36-i tb-cursor--pointer"
+                ngClass.xs="tb-padding--h-16-i" (click)="_scrollToElement(1)">
+                Blog
+            </a>
+            <a matRipple
+                class="tb-a--unset tb-flex--justify-center tb-typo--h5 tb-font-weight--medium tb-color--grey-500 tb-padding--8-36-i tb-cursor--pointer"
+                ngClass.xs="tb-padding--h-16-i" (click)="_scrollToElement(2)">
+                Shop
+            </a>
+            <a matRipple
+                class="tb-a--unset tb-flex--justify-center tb-typo--h5 tb-font-weight--medium tb-color--grey-500 tb-padding--8-36-i tb-cursor--pointer"
+                ngClass.xs="tb-padding--h-16-i" (click)="_scrollToElement(3)">
+                Contact us
+            </a> -->
+        </mat-toolbar-row>
+
+        <mat-toolbar-row fxLayoutAlign="end center">
+            <ng-container>
+                <div fxLayout="row">
+
+                    <div  class="menu-option" (click)="_openNavigation()">
+                        <span class="big-block tb-theme-bg--secondary"></span>
+                        <span class="thin-block tb-theme-bg--primary"></span>
+                    </div>
+                    <div class="tb-width--16"></div>
+                    <!-- <button mat-button color="primary" (click)="_openNavigation()">
+                        <span class="tb-typo--button">Login</span>
+                    </button> -->
+                </div>
+            </ng-container>
+        </mat-toolbar-row>
+
+    </mat-toolbar>
+
+    <!-- conatiner div -->
+    <mat-sidenav-container class="tb-height--full">
+        <mat-sidenav-content fxLayout="column">
+            <div class="tb-height--full" fxLayout="column">
+                <!--  tb-color-bg--white -->
+                <div fxFlex cdkScrollable class="tb-height--full tb-overflow--auto" id="dashboard-container"
+                    #contentScroller>
+                    <!-- (activate)="onActivate($event, outlet)" -->
+                    <router-outlet #outlet></router-outlet>
+                </div>
+            </div>
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+    <!-- <mat-sidenav-container class="tb-height--full">
+        <mat-sidenav-content fxLayout="column">
+            <div class="tb-height--full" fxLayout="column">
+                <div fxFlex class="tb-height--full tb-color-bg--white tb-overflow--auto" id="dashboard-container"
+                    #contentScroller>
+                    <router-outlet  #outlet></router-outlet>
+                </div>
+            </div>
+        </mat-sidenav-content>
+
+    </mat-sidenav-container> -->
+</div>
