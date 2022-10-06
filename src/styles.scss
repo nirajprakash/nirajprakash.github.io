@@ -4,6 +4,14 @@
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
 
+@use 'styles/current/colors/palette' as palette;
+
+@use 'styles/basics/typography/variables' as typo;
+
+
+
+@use  "styles/class" as *;
+
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
@@ -18,6 +26,10 @@ $niraj-portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400)
 // The warn palette is optional (defaults to red).
 $niraj-portfolio-warn: mat.define-palette(mat.$red-palette);
 
+$junkielabs-typography-config : mat.define-typography-config(
+  $font-family: typo.$tb-typo-family-secondary
+);
+
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 $niraj-portfolio-theme: mat.define-light-theme((
@@ -25,7 +37,8 @@ $niraj-portfolio-theme: mat.define-light-theme((
     primary: $niraj-portfolio-primary,
     accent: $niraj-portfolio-accent,
     warn: $niraj-portfolio-warn,
-  )
+  ),
+  typography: $junkielabs-typography-config
 ));
 
 // Include theme styles for core and each component used in your app.

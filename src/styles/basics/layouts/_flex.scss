@@ -1,0 +1,28 @@
+.tb-flex--justify-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tb-flex--justify-end {
+    justify-content: flex-end;
+  }
+  
+  .tb-flex--align-items {
+    display: flex;
+    align-items: center;
+  }
+  .tb-flex--align-vertical {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+  }
+  
+  .tb-flex--justify-start {
+    justify-content: flex-start;
+  }
+  
+  .tb-flex--shrink-0 {
+    flex-shrink: 0;
+  }
+  

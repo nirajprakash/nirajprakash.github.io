@@ -1,0 +1,23 @@
+@use "./../../../basics/typography/variables" as *;
+
+@debug(url("/#{$fonts-root}Mont-HeavyDEMO.otf"));
+@debug("#{$fonts-root}Mont-HeavyDEMO.otf");
+
+@font-face {
+    font-family: "Mont";
+    src: url("/#{$fonts-root}Mont-ExtraLightDEMO.otf") format("opentype");
+    font-weight: 100;
+}
+
+// // @font-face {
+// //     font-family: "Mont";
+// //     src: url('Mont-ExtraLightDEMO.otf') format("opentype");
+// //     font-weight: 200;
+// // }
+
+@font-face {
+    font-family: "Mont";
+    src: url('/#{$fonts-root}Mont-HeavyDEMO.otf') format("opentype");
+    font-weight: 700;
+}
+

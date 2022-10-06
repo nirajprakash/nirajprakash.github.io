@@ -1,0 +1,46 @@
+@use "./variables" as *;
+
+/// Returns the appropriate box-shadow for the given level and shadow color.
+///
+/// @throw If level or shadow-color are provided and one is null.
+/// @param {Number} $level - The level of the elevation system.
+/// @return {List|String} - The constructed box-shadow, none (for elevation 0),
+///     or null
+@function resolve-box-shadow($level, $shadow-key-css-color, $shadow-ambient-css-color) {
+    @if $level == null {
+        @return null;
+    }
+
+    @if $level == 0 {
+        @return none;
+    }
+
+    @if $level == null {
+        @error '$elevation is required when $shadow-color is provided';
+    }
+
+    $key-spread: map-get($shadow-map, $level, key);
+    $ambient-spread: map-get($shadow-map, $level, ambient);
+    $key-opacity: map-get($shadow-map, $level, keyOpacity);
+    $ambient-opacity: map-get($shadow-map, $level, ambientOpacity);
+
+    $key-color: rgba($shadow-key-css-color, $key-opacity);
+    $ambient-color: rgba($shadow-ambient-css-color, $ambient-opacity);
+    //  $we: color.
+    //   box-shadow: 10px 2px 12px -4px rgba(color(tb-theme-primary--rgb), 0.8);
+
+    // @if var.is-var($shadow-color) {
+    //   // TODO(b/213331407): Convert color from hex to rgba CSS color format to
+    //   // enable mixing rgb value with alpha using custom properties.
+    //   // (e.g., rgb(var(--foo-sys-color-on-surface-rgb, 31,31,31), 0.38))
+    //   // Remove once the attached bug is resolved.
+    //   $key-color: color.color-var-hex-to-rgba($shadow-color, $_key-opacity);
+    //   $ambient-color: color.color-var-hex-to-rgba(
+    //     $shadow-color,
+    //     $_ambient-opacity
+    //   );
+    // }
+
+    @return (#{$key-spread} #{$key-color}, #{$ambient-spread} #{$ambient-color});
+    // @return null;
+}

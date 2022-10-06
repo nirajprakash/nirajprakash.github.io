@@ -1,0 +1,35 @@
+.tb-overflow- {
+  &-auto {
+    overflow: auto;
+  }
+  &-unset {
+    overflow: unset;
+  }
+  &-hidden {
+    overflow: hidden;
+  }
+  &-scroll {
+    overflow: scroll;
+  }
+  &-x-scroll {
+    overflow-x: scroll;
+  }
+  &-y-scroll {
+    overflow-y: scroll;
+  }
+  &-y-auto {
+    overflow-y: auto;
+  }
+  &-x-hidden {
+    overflow-x: hidden;
+  }
+  &-y-hidden {
+    overflow-y: hidden;
+  }
+  &-x-visible {
+    overflow-x: visible;
+  }
+  &-y-visible {
+    overflow-y: visible;
+  }
+}

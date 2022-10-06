@@ -1,0 +1,126 @@
+@use '@angular/material' as mat;
+
+$current-color-dark-primary-text: rgba(black, 0.87);
+
+$current-color-light-primary-text: white;
+$current-color-dark-secondary-text: rgba(black, 0.54);
+$current-color-dark-disabled-text: rgba(black, 0.38);
+$current-color-dark-dividers: rgba(black, 0.12);
+$current-color-dark-focused: rgba(black, 0.12);
+$current-color-light-secondary-text: rgba(white, 0.7);
+$current-color-light-disabled-text: rgba(white, 0.5);
+$current-color-light-dividers: rgba(white, 0.12);
+$current-color-light-focused: rgba(white, 0.12);
+
+$current-color-black: (
+    50: #fafafa,
+    100: #f5f5f5,
+    200: #e6e6e6,
+    300: #b5b5b5,
+    400: #6b6b6b,
+    500: #3a3a3a,
+    600: #212121,
+    700: #090909,
+    800: #080808,
+    900: #070707,
+    A100: #ffffff,
+    A200: #eeeeee,
+    A400: #bdbdbd,
+    A700: #616161,
+  contrast: (
+    50: $current-color-dark-primary-text,
+    100: $current-color-dark-primary-text,
+    200: $current-color-dark-primary-text,
+    300: $current-color-dark-primary-text,
+    400: $current-color-light-primary-text,
+    500: $current-color-light-primary-text,
+    600: $current-color-light-primary-text,
+    700: $current-color-light-primary-text,
+    800: $current-color-light-primary-text,
+    900: $current-color-light-primary-text,
+    A100: $current-color-dark-primary-text,
+    A200: $current-color-light-primary-text,
+    A400: $current-color-light-primary-text,
+    A700: $current-color-light-primary-text
+  )
+);
+
+$current-color-green: (
+  50 : #EFFEEF,
+    100 : #beffcb,
+    200 : #52DF70,
+    300 : #38f85f,
+    400 : #0fe039,
+    500 : #00C527,
+    600 : #04b327,
+    700 : #049922,
+    800 : #078520,
+    900 : #066d1b,
+    A100 : #afffba,
+    A200 : #79ff8b,
+    A400 : #49EE5F,
+    A700 : #03ff25,
+  contrast: (
+    50: $current-color-dark-primary-text,
+    100: $current-color-dark-primary-text,
+    200: $current-color-dark-primary-text,
+    300: $current-color-light-primary-text,
+    400: $current-color-light-primary-text,
+    500: $current-color-light-primary-text,
+    600: $current-color-light-primary-text,
+    700: $current-color-light-primary-text,
+    800: $current-color-light-primary-text,
+    900: $current-color-light-primary-text,
+    A100: $current-color-dark-primary-text,
+    A200: $current-color-light-primary-text,
+    A400: $current-color-light-primary-text,
+    A700: $current-color-light-primary-text
+  )
+);
+
+
+$current-color-red: (
+  50: #fee8e7,
+  100: #fcc7c3,
+  200: #ff7e8d,
+  300: #ff5266,
+  400: #fe2b43,
+  500: #E70B25,
+  600: #d80d25,
+  700: #ca0920,
+  800: #a40417,
+  900: #920515,
+  A100: #ffffff,
+  A200: #ffe9e9,
+  A400: #ffb8b6,
+  A700: #ff9f9c,
+  contrast: (
+    50: $current-color-dark-primary-text,
+    100: $current-color-dark-primary-text,
+    200: $current-color-dark-primary-text,
+    300: $current-color-light-primary-text,
+    400: $current-color-light-primary-text,
+    500: $current-color-light-primary-text,
+    600: $current-color-light-primary-text,
+    700: $current-color-light-primary-text,
+    800: $current-color-light-primary-text,
+    900: $current-color-light-primary-text,
+    A100: $current-color-dark-primary-text,
+    A200: $current-color-light-primary-text,
+    A400: $current-color-light-primary-text,
+    A700: $current-color-light-primary-text
+  )
+);
+
+
+
+
+$current-color-primary: $current-color-black;
+
+$current-color-secondary: $current-color-green;
+
+$current-color-angular-webapp-primary: mat.define-palette($current-color-primary, $default: 700, $lighter: 100, $darker: 900);
+$current-color-angular-webapp-accent: mat.define-palette($current-color-secondary, A200, A100, A400);
+
+
+$current-color-angular-webapp-warn: mat.define-palette(mat.$red-palette);

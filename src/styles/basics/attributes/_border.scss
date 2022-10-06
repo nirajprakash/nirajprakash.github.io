@@ -1,0 +1,58 @@
+// @use '../../theme/variables' as *;
+
+.tb-border--bottom-line {
+    border-bottom: solid 1px #dadada;
+}
+
+.tb-border--bottom-line-light {
+    border-bottom: solid 1px #f7f7f7;
+}
+
+.tb-border--r24 {
+    border-radius: 24px !important;
+}
+
+.tb-border--r14 {
+    border-radius: 14px !important;
+}
+
+.tb-border--r12 {
+    border-radius: 12px !important;
+}
+
+.tb-border--r10 {
+    border-radius: 10px !important;
+}
+.tb-border--r8 {
+    border-radius: 8px !important;
+}
+
+.tb-border--r4 {
+    border-radius: 4px !important;
+}
+
+.tb-border--r0 {
+    border-radius: 0px !important;
+}
+
+.tb-border--r2 {
+    border-radius: 2px !important;
+}
+
+
+
+.tb-border--r2 {
+    border-radius: 2px !important;
+}
+
+.tb-border {
+    border: solid 1px #b0b0b0 !important;
+}
+
+// .tb-border-line--primary{
+//     border: solid 1px $tb-theme-primary;
+// }
+
+.tb-border--thick {
+  border: solid 3px #b0b0b0 !important;
+}

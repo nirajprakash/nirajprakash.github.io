@@ -1,0 +1,12 @@
+@use "./variables" as *;
+
+@use "./../../basics/color/functions" as color;
+
+// @forward "mat";
+
+.current {
+    @each $colorKey in map-keys($current-color-shadow-map) {
+        --current-color-#{$colorKey}: #{map-get($map: $current-color-shadow-map, $key: $colorKey)};
+        --current-color-#{$colorKey}--rgb: #{color.hexToCssRGB(map-get($map: $current-color-shadow-map, $key: $colorKey))};
+    }
+}

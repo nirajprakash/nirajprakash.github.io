@@ -1,0 +1,29 @@
+.tb-nowrap {
+    white-space: nowrap;
+  }
+  
+  .tb-text--capitalize{
+    text-transform: capitalize;
+  }
+  
+  .tb-text--overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .tb-text--pre{
+    // text-align: justify;
+    position: relative;
+    white-space: pre-wrap;
+    // word-wrap: break-word;
+    word-break: break-word;
+    // overflow-wrap: break-word;
+  
+   
+  }
+  
+  .tb-text--nowrap {
+    white-space: nowrap;
+  }
+  

@@ -1,0 +1,22 @@
+@use "./variables" as *;
+@use "./functions" as *;
+
+@use "./../../../basics/color/functions" as color;
+// .current-shadow {
+//     // --tb-theme-#{$colorKey}: #{map-get($map: $tb-theme-map, $key: $colorKey)};
+//     // --tb-theme-#{$colorKey}--rgb: #{hexToRGB(map-get($map: $tb-theme-map, $key: $colorKey))};
+// }
+
+@each $shadowLevel in map-keys($shadow-map) {
+    .current-elevation--#{$shadowLevel} {
+        //   @include tb-typo($typo);
+        box-shadow: resolve-box-shadow(
+            $shadowLevel,
+            color.cssColor(current-color-shadow-key--rgb),
+            color.cssColor(current-color-shadow-ambient--rgb)
+        );
+    }
+    // .tb-typo--#{$typo}-i {
+    //   @include tb-typo($typo) !important;
+    // }
+}

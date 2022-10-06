@@ -1,0 +1,32 @@
+@use "./variables" as typo;
+@use "./mixin" as *;
+
+@each $typo in map-keys(typo.$tb-typo-map) {
+  .tb-typo--#{$typo} {
+    @include tb-typo($typo);
+  }
+  // .tb-typo--#{$typo}-i {
+  //   @include tb-typo($typo) !important;
+  // }
+}
+
+@each $typo in map-keys(typo.$tb-typo-map) {
+  #tb-typo--#{$typo} {
+    @include tb-typo($typo);
+  }
+}
+
+@each $weight in map-keys(typo.$tb-font-weight) {
+  .tb-font-weight--#{$weight} {
+    font-weight: map-get($map: typo.$tb-font-weight, $key: $weight);
+  }
+}
+
+// .tb-font--comfortaa{
+//   font-family: $font-comfortaa;
+//   line-height: 150%;
+// }
+// .tb-font--open-sans{
+//   font-family: typo.$font-open-sans;
+//   line-height: 150%;
+// }

@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+@forward "./fonts/mont";
+
+@mixin current-typo($typo) {
+    $typo-props: map-get($current-typo-map, $typo);
+    @each $key, $value in $typo-props {
+        #{$key}: $value;
+    }
+}
+
+@each $weight in map-keys($map: $current-font-weight) {
+    $weight-name: map-get($current-font-weight, $weight);
+
+    @if $weight-name == "" {
+        @each $typo in map-keys($current-typo-map) {
+            .current-typo--#{$typo} {
+                @include current-typo($typo);
+                font-weight: $weight;
+            }
+        }
+    } @else {
+        @each $typo in map-keys($current-typo-map) {
+            .current-typo--#{$typo}-#{$weight-name} {
+                @include current-typo($typo);
+                font-weight: $weight;
+            }
+            // .tb-typo--#{$typo}-i {
+            //   @include tb-typo($typo) !important;
+            // }
+        }
+    }
+}
+
+// .current-font {
+
+// @each $colorKey in map-keys($current-theme-map) {
+//     --current-theme-#{$colorKey}: #{map-get($map: $current-theme-map, $key: $colorKey)};
+//     --current-theme-#{$colorKey}--rgb: #{color.hexToCssRGB(map-get($map: $current-theme-map, $key: $colorKey))};
+// }
+// }

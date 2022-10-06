@@ -1,0 +1,38 @@
+// $tb-theme-primary: $mat-theme-primary !default;
+// $tb-theme-primary-dark: $mat-theme-primary-dark !default;
+// $tb-theme-secondary: $mat-theme-secondary !default;
+// $tb-theme-secondary-dark: $mat-theme-secondary-dark !default;
+
+$tb-theme-primary: #090909 !default;
+$tb-theme-primary-dark: #262727 !default;
+$tb-theme-primary-light:#262727 !default;
+$tb-theme-primary-accent:#262727 !default;
+$tb-theme-primary-background:#f3fbfb !default;
+$tb-theme-secondary: #E70B25 !default;
+$tb-theme-secondary-dark: #cd0b21 !default;
+// $tb-theme-secondary-light: #f71d1d !default;
+// $tb-theme-secondary-background: #ffeaea !default;
+$tb-theme-background: #ffffff !default;
+
+
+
+$tb-theme-submit: #00ff00 !default;
+$tb-theme-error: #FE5858 !default;
+// $tb-theme-fail : #ED9874 !default;
+$tb-theme-disable: #979797 !default;
+
+// $tb-theme-warning: yellow !default;
+$tb-theme-success: #00ff00 !default;
+// $tb-theme-danger: red !default;
+
+$tb-theme-map: (
+  primary-light: $tb-theme-primary-light,
+  primary: $tb-theme-primary,
+  primary-dark:$tb-theme-primary-dark,
+  primary-accent:$tb-theme-primary-accent,
+  primary-background:$tb-theme-primary-background,
+  secondary: $tb-theme-secondary,
+  error: $tb-theme-error,
+  success: $tb-theme-success,
+  submit: $tb-theme-submit
+);

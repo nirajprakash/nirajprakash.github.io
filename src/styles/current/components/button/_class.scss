@@ -1,0 +1,122 @@
+// @use "@angular/material" as mat;
+// @use "../../theme/palette" as palette;
+
+// @use "../../../others/mat/function" as func;
+
+// $light-primary: mat.define-palette(mat.$indigo-palette);
+// $light-accent: mat.define-palette(mat.$pink-palette);
+// $light-warn: mat.define-palette(mat.$orange-palette);
+
+// @debug mat.$light-theme-background-palette;
+// $er: mat.define-light-theme(
+//     (
+//         color: (
+//             primary: $light-primary,
+//             accent: $light-accent,
+//             foreground: func.mat-theme-foreground(map-get(palette.$junkie-green, 600)),
+//         ),
+//     )
+// );
+// // @debug map-get($er, color);
+// $light-theme: func.mat-theme(
+//     $light-primary,
+//     $light-accent,
+//     $light-warn,
+//     func.mat-theme-foreground(map-get(palette.$junkie-green, 600))
+// );
+
+// .junkie-theme {
+//     @include mat.button-theme($light-theme);
+// }
+
+// @use '../tb/theme/variables' as *;
+
+// @use 'function' as *;
+
+// .fused-primary {
+//     $fused-priamry-theme: fused-mat-theme(palette.$treeform-angular-webapp-primary, palette.$treeform-angular-webapp-accent, palette.$treeform-angular-webapp-warn,
+//     fused-mat-theme-foreground($tb-theme-primary));
+//     @include mat.button-theme($fused-priamry-theme);
+
+// }
+
+// .fused-secondary {
+
+//     $fused-secondary-theme: fused-mat-theme(palette.$treeform-angular-webapp-accent, palette.$treeform-angular-webapp-accent, palette.$treeform-angular-webapp-warn,
+//     fused-mat-theme-foreground($tb-theme-secondary));
+//     @include mat.button-theme($fused-secondary-theme);
+
+// }
+
+// .fused-warn {
+
+//     $fused-warn-theme: fused-mat-theme(palette.$treeform-angular-webapp-warn, palette.$treeform-angular-webapp-warn, palette.$treeform-angular-webapp-warn,
+//     fused-mat-theme-foreground($tb-theme-error));
+//     @include mat.button-theme($fused-warn-theme);
+
+// }
+
+// .fused-orange {
+//   $fused-orange-theme: fused-mat-theme(palette.$treeform-angular-webapp-orange, palette.$treeform-angular-webapp-orange, palette.$treeform-angular-webapp-orange,
+//   fused-mat-theme-foreground(palette.$treeform-theme-orange));
+//   @include mat.button-theme($fused-orange-theme);
+
+// }
+
+// // .fused-blue {
+// //   $fused-blue-theme: fused-mat-theme(palette.$treeform-angular-webapp-blue, palette.$treeform-angular-webapp-blue, palette.$treeform-angular-webapp-blue,
+// //   fused-mat-theme-foreground(palette.$tb-theme-blue));
+// //   @include mat.button-theme($fused-blue-theme);
+
+// // }
+
+// .fused-black {
+//   $fused-black-theme: fused-mat-theme(palette.$treeform-angular-webapp-black, palette.$treeform-angular-webapp-black,
+//   palette.$treeform-angular-webapp-black,
+//   fused-mat-theme-foreground(palette.$treeform-theme-black));
+//   @include mat.button-theme($fused-black-theme);
+
+// }
+
+.current {
+    .current-raised-button {
+        position: relative;
+        border-radius: 0px;
+        padding: 4px 20px;
+        overflow: hidden;
+
+        // &:not(){
+
+        // }
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 400%;
+            left: -50%;
+            top: 50%;
+            width: 40%;
+            background: white;
+            opacity: 1;
+            z-index: 2;//-2;
+            // rotateZ(40deg)
+            transform-origin: 0 0;
+            transform: rotate(40deg) translate(-50%, -50%);//skewY(20deg);
+
+            transition: all 0.5s ease;
+            // transition: --border 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        &:hover:enabled {
+            &::after {
+
+                left: 150%;
+
+            }
+        }
+
+        .tb-typo--button {
+            vertical-align: middle;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@function tbTypo($base-props, $props-map) {
+  @each $typo, $props in $props-map {
+    // @debug $typo;
+    // @debug $props; // Merge base properties for all styles.
+    $props: map-merge(
+      $base-props,
+      $props
+    ); // Merge global overrides onto each style.
+    // @if global_variable_exists(mat-typography-styles-#{$typo}) {
+    // $props: map-merge($props, mat-typography-get-global-variable_(#{$typo}));
+    // }
+    // Override original styles with new styles.
+    $props-map: map-merge($props-map, (#{$typo}: $props));
+  }
+  @return $props-map;
+}

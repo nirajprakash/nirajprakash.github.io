@@ -1,0 +1,7 @@
+@function hexToCssRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+}
+
+@function cssColor($color-name) {
+    @return var(--#{$color-name});
+}

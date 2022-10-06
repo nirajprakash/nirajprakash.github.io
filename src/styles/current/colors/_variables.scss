@@ -1,0 +1,8 @@
+
+$current-color-shadow-key: #000000 !default;
+$current-color-shadow-ambient: #000000 !default;
+
+$current-color-shadow-map: (
+    shadow-key: $current-color-shadow-key,
+    shadow-ambient: $current-color-shadow-ambient,
+);

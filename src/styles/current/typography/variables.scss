@@ -1,0 +1,125 @@
+@use "./../../basics/typography/variables" as typo;
+@use "./../../basics/typography/function" as *;
+
+$font-mont: "Mont", sans-serif;
+$font-jost: "Jost", sans-serif;
+$current-font-weight: (100:'thin', 300: 'light', 400: '', 500: 'medium', 700: 'bold', 800: 'bolder', 900: 'dark');
+
+$current-typo-map: tbTypo(
+  typo.$tb-typo-base,
+  (
+    h1: (
+      font-size: #{map-get(typo.$tb-typo-sizes, h1)}rem,
+      /* 96sp*/ line-height: map-get(typo.$tb-typo-line-height, h1),
+     
+      font-family: $font-mont,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    h2: (
+      font-size: #{map-get(typo.$tb-typo-sizes, h2)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, h2),
+     
+      font-family: $font-mont,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    h3: (
+      font-size: #{map-get(typo.$tb-typo-sizes, h3)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, h3),
+     
+      font-family: $font-mont,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    h4: (
+      font-size: #{map-get(typo.$tb-typo-sizes, h4)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, h4),
+     
+      font-family: $font-mont,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    h5: (
+      font-size: #{map-get(typo.$tb-typo-sizes, h5)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, h5),
+     
+      font-family: $font-jost,
+      text-decoration: inherit,
+      
+      text-transform: inherit
+    ),
+    h6: (
+      font-size: #{map-get(typo.$tb-typo-sizes, h6)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, h6),
+     
+      font-family: $font-jost,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    subtitle1: (
+      font-size: #{map-get(typo.$tb-typo-sizes, subtitle1)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, subtitle1),
+     
+      font-family: $font-mont,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    subtitle2: (
+      font-size: #{map-get(typo.$tb-typo-sizes, subtitle2)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, subtitle2),
+     
+      font-family: $font-mont,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    body1: (
+      font-size: #{map-get(typo.$tb-typo-sizes, body1)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, body1),
+     
+      font-family: $font-jost,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    body2: (
+      font-size: #{map-get(typo.$tb-typo-sizes, body2)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, body2),
+     
+      font-family: $font-jost,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    body3: (
+      font-size: #{map-get(typo.$tb-typo-sizes, body3)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, body3),
+     
+      font-family: $font-jost,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    caption: (
+      font-size: #{map-get(typo.$tb-typo-sizes, caption)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, caption),
+     
+      font-family: $font-jost,
+      text-decoration: inherit,
+      text-transform: uppercase
+    ),
+    button: (
+      font-size: #{map-get(typo.$tb-typo-sizes, button)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, button),
+     
+      font-family: $font-jost,
+      text-decoration: none,
+      text-transform: none
+    ),
+    overline: (
+      font-size: #{map-get(typo.$tb-typo-sizes, overline)}rem,
+      /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, overline),
+     
+      font-family: $font-mont,
+      text-decoration: none,
+      text-transform: uppercase
+    )
+  )
+) !default;

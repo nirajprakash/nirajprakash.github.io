@@ -1,0 +1,43 @@
+$shadow-map: (
+  0: (
+    key: "0px 0px 0px 0px",
+    ambient: "0px 0px 0px 0px",
+    keyOpacity: 0,
+    ambientOpacity: 0,
+  ),
+  1: (
+    key: "0px 1px 2px 0px",
+    ambient: "0px 1px 3px 1px",
+    keyOpacity: 0.2,
+    ambientOpacity: 0.2,
+  ),
+  2: (
+    key: "0px 1px 2px 0px",
+    ambient: "0px 4px 33px -12px",
+    keyOpacity: 0.03,
+    ambientOpacity: 0.09,
+  ),
+  3: (
+    key: "0px 1px 3px 0px",
+    ambient: "0px 4px 8px 3px",
+    
+    keyOpacity: 0.03,
+    ambientOpacity: 0.09,
+  ),
+  4: (
+    key: "0px 2px 5px 0px",
+    ambient: "0px 14px 33px -8px",
+    
+    keyOpacity: 0.03,
+    ambientOpacity: 0.09,
+  ),
+  5: (
+    key: "0px 4px 4px 0px",
+    ambient: "0px 8px 12px 6px",
+    
+    keyOpacity: 0.03,
+    ambientOpacity: 0.09,
+  ),
+);
+
+

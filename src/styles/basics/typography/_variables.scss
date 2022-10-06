@@ -1,0 +1,227 @@
+@use "function" as *;
+
+
+$assets-root: 'assets/';
+$fonts-root: $assets-root + 'fonts/';
+
+// $font-lato: 'Lato';
+// $font-segoe: 'Segoe UI';
+$font-dm-sans: 'DM Sans', sans-serif;
+$font-work-sans: 'Work Sans', sans-serif;
+// $font-source-sans: 'Source Sans Pro', sans-serif;
+$font-open-sans: "Open Sans", "sans-serif";
+// $font-comfortaa: 'Comfortaa', cursive;
+// $font-noto-serif: 'Noto Serif';
+$font-nunito-sans: "Nunito Sans", sans-serif;
+// $font-Sedgwick-Ave:'Sedgwick-Ave','cursive';
+// $font-avenir:'avenir';
+// $font-helvetica-neue:'helvetica-neue';
+$font-hansom: "HansomFYW01";
+
+$font-roboto: "Roboto", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+$font-Baloo-Bhaina-2: "Baloo Bhaina 2", sans-serif;
+
+$font-overlock: "Overlock", cursive;
+$tb-typo-family-primary: $font-work-sans !default;
+$tb-typo-family-secondary: $font-dm-sans !default;
+
+// $tb-typo-weight-thin: 100;
+// $tb-typo-weight-lightest:200;
+// $tb-typo-weight-light: 300;
+// $tb-typo-weight-normal: 400;
+// $tb-typo-weight-medium: 500;
+// $tb-typo-weight-bold: 600;
+// $tb-typo-weight-bolder: 700;
+// $tb-typo-weight-ultraBold: 900;
+
+$tb-font-weight: (
+  thin: 100,
+  lightest: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  bold: 700,
+  bolder: 800,
+  ultra-bold: 900
+);
+$tb-typo-line-height: (
+  h1: 1,
+  h2: 1.3,
+  h3: 1.2,
+  h4: 1.2,
+  h5: 1.2,
+  h6: 1.2,
+  subtitle1: 1.2,
+  subtitle2: 1.2,
+  body1: 1.3,
+  body2: 1.2,
+  body3: 0.85,
+  button: unset,
+  caption: 1,
+  overline: 1
+);
+// $tb-typo-sizes: (
+
+//   h1: 2.8,
+//   h2: 2.0,
+//   h3: 1.6,
+//   h4: 1.2,
+//   h5: 1.05,
+//   h6: 0.78,
+//   subtitle1: 1.37,
+//   subtitle2: 1,
+//   body1: 1,
+//   body2: 0.89,
+//   body3: 0.74,
+//   button: 1.1,
+//   button2: 0.75,
+//   caption: 0.60,
+//   overline: 1
+// );
+$tb-typo-sizes: (
+
+  h1: 7,
+  h2: 5.8,
+  h3: 3.2,
+  h4: 1.8,
+  h5: 1.5,
+  h6: 1.20,
+  subtitle1: 1.37,
+  subtitle2: 1,
+  body1: 1.20,
+  body2: 1.1,
+  body3: 0.84,
+  button: 1.1,
+  button2: 0.75,
+  caption: 0.60,
+  overline: 1
+);
+
+$tb-typo-weights: (
+  h1: 400,
+  // h2: 300,
+    h2: 900,
+  h3: 500,
+  h4: 500,
+  h5: 500,
+  h6: 500,
+  subtitle1: 400,
+  subtitle2: 600,
+  body1: 400,
+  body2: 400,
+  body3: 400,
+  button: 500,
+  caption: 500,
+  overline: 400
+);
+$tb-typo-base: (
+  font-family: $tb-typo-family-secondary,
+  -moz-osx-font-smoothing: grayscale,
+  -webkit-font-smoothing: antialiased
+);
+$tb-typo-map: tbTypo(
+  $tb-typo-base,
+  (
+    h1: (
+      font-size: #{map-get($tb-typo-sizes, h1)}rem,
+      /* 96sp*/ line-height: map-get($tb-typo-line-height, h1),
+      font-weight: map-get($tb-typo-weights, h1),
+      font-family: $tb-typo-family-primary,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    h2: (
+      font-size: #{map-get($tb-typo-sizes, h2)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, h2),
+      font-weight: map-get($tb-typo-weights, h2),
+      font-family: $tb-typo-family-primary,
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    h3: (
+      font-size: #{map-get($tb-typo-sizes, h3)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, h3),
+      font-weight: map-get($tb-typo-weights, h3),
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    h4: (
+      font-size: #{map-get($tb-typo-sizes, h4)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, h4),
+      font-weight: map-get($tb-typo-weights, h4),
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    h5: (
+      font-size: #{map-get($tb-typo-sizes, h5)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, h5),
+      font-weight: map-get($tb-typo-weights, h5),
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    h6: (
+      font-size: #{map-get($tb-typo-sizes, h6)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, h6),
+      font-weight: map-get($tb-typo-weights, h6),
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    subtitle1: (
+      font-size: #{map-get($tb-typo-sizes, subtitle1)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, subtitle1),
+      font-weight: map-get($tb-typo-weights, subtitle1),
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    subtitle2: (
+      font-size: #{map-get($tb-typo-sizes, subtitle2)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, subtitle2),
+      font-weight: map-get($tb-typo-weights, subtitle2),
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    body1: (
+      font-size: #{map-get($tb-typo-sizes, body1)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, body1),
+      font-weight: map-get($tb-typo-weights, body1),
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    body2: (
+      font-size: #{map-get($tb-typo-sizes, body2)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, body2),
+      font-weight: map-get($tb-typo-weights, body2),
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    body3: (
+      font-size: #{map-get($tb-typo-sizes, body3)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, body3),
+      font-weight: map-get($tb-typo-weights, body3),
+      text-decoration: inherit,
+      text-transform: inherit
+    ),
+    caption: (
+      font-size: #{map-get($tb-typo-sizes, caption)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, caption),
+      font-weight: map-get($tb-typo-weights, caption),
+      text-decoration: inherit,
+      text-transform: uppercase
+    ),
+    button: (
+      font-size: #{map-get($tb-typo-sizes, button)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, button),
+      font-weight: map-get($tb-typo-weights, button),
+      text-decoration: none,
+      text-transform: none
+    ),
+    overline: (
+      font-size: #{map-get($tb-typo-sizes, overline)}rem,
+      /* 60sp*/ line-height: map-get($tb-typo-line-height, overline),
+      font-weight: map-get($tb-typo-weights, overline),
+      text-decoration: none,
+      text-transform: uppercase
+    )
+  )
+) !default;

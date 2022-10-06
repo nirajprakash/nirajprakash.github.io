@@ -1,0 +1,8 @@
+@use "variables" as *;
+
+@mixin tb-typo($typo) {
+  $typo-props: map-get($tb-typo-map, $typo);
+  @each $key, $value in $typo-props {
+    #{$key}: $value;
+  }
+}

@@ -1,0 +1,33 @@
+@use "./variables" as *;
+// @debug $pl-color-black-alpha-map;
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@each $colorKey in map-keys($tb-theme-map) {
+  .tb-theme--#{$colorKey} {
+    color: map-get($map: $tb-theme-map, $key: $colorKey);
+  }
+
+  .tb-theme-bg--#{$colorKey} {
+    background-color: map-get($map: $tb-theme-map, $key: $colorKey);
+  }
+  .tb-theme--#{$colorKey}-alpha {
+    color: rgba(map-get($map: $tb-theme-map, $key: $colorKey), 0.2);
+  }
+
+  .tb-theme-bg--#{$colorKey}-alpha {
+    background-color: rgba(map-get($map: $tb-theme-map, $key: $colorKey), 0.06);
+  }
+}
+
+.tb-theme{
+  @each $colorKey in map-keys($tb-theme-map) {
+
+    --tb-theme-#{$colorKey}: #{map-get($map: $tb-theme-map, $key: $colorKey)};
+    --tb-theme-#{$colorKey}--rgb: #{hexToRGB(map-get($map: $tb-theme-map, $key: $colorKey))};
+  }
+
+}
+

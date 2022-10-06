@@ -1,0 +1,142 @@
+@use "./variables" as *;
+// @debug $tb-color-black-alpha-map;
+@each $colorKey in map-keys($tb-color-black-alpha-map) {
+  // @debug $colorKey;
+  .tb-color--black-#{$colorKey} {
+    color: map-get($map: $tb-color-black-alpha-map, $key: $colorKey);
+  }
+
+  .tb-color-bg--black-#{$colorKey} {
+    background-color: map-get($map: $tb-color-black-alpha-map, $key: $colorKey);
+  }
+}
+
+@each $colorKey in map-keys($tb-color-white-alpha-map) {
+  .tb-color--white-#{$colorKey} {
+    color: map-get($map: $tb-color-white-alpha-map, $key: $colorKey);
+  }
+
+  .tb-color-bg--white-#{$colorKey} {
+    background-color: map-get($map: $tb-color-white-alpha-map, $key: $colorKey);
+  }
+}
+
+
+
+
+.tb-color--white {
+  color: white;
+}
+.tb-color--black {
+  color: black;
+}
+.tb-color--white-i {
+  color: white !important;
+}
+.tb-color-bg--white {
+  background-color: white;
+}
+
+.tb-color-bg--transparent {
+  background-color: transparent;
+}
+.tb-color-bg--black {
+  background-color: black !important;
+}
+.tb-color-bg--green {
+  background-color: #35cea5;
+}
+.tb-color-bg--blue {
+  background-color: #2f78e8;
+}
+.tb-color-bg--red {
+  background-color: #fb365d;
+}
+
+
+
+
+
+
+@each $colorKey in map-keys($tb-orange) {
+  .tb-color--orange-#{$colorKey} {
+    //@debug $colorKey;
+
+    //$vs : map-get($map: $tb-orange, $key: $colorKey);
+    // @debug $vs;
+    color: map-get($map: $tb-orange, $key: $colorKey);
+  }
+
+  .tb-color-bg--orange-#{$colorKey} {
+    //@debug $colorKey;
+
+    //$vs : map-get($map: $tb-orange, $key: $colorKey);
+    // @debug $vs;
+    background-color: map-get($map: $tb-orange, $key: $colorKey);
+  }
+}
+
+@each $colorKey in map-keys($tb-grey) {
+  .tb-color--grey-#{$colorKey} {
+    //@debug $colorKey;
+
+    //$vs : map-get($map: $tb-grey, $key: $colorKey);
+    // @debug $vs;
+    color: map-get($map: $tb-grey, $key: $colorKey);
+  }
+  .tb-color-bg--grey-#{$colorKey} {
+    //@debug $colorKey;
+
+    //$vs : map-get($map: $tb-grey, $key: $colorKey);
+    // @debug $vs;
+    background-color: map-get($map: $tb-grey, $key: $colorKey);
+  }
+}
+@each $colorKey in map-keys($tb-green) {
+  .tb-color--green-#{$colorKey} {
+    //@debug $colorKey;
+
+    //$vs : map-get($map: $tb-green, $key: $colorKey);
+    // @debug $vs;
+    color: map-get($map: $tb-green, $key: $colorKey);
+  }
+  .tb-color-bg--green-#{$colorKey} {
+    //@debug $colorKey;
+
+    //$vs : map-get($map: $tb-green, $key: $colorKey);
+    // @debug $vs;
+    background-color: map-get($map: $tb-green, $key: $colorKey);
+  }
+}
+@each $colorKey in map-keys($tb-blue) {
+  .tb-color--blue-#{$colorKey} {
+    //@debug $colorKey;
+
+    //$vs : map-get($map: $tb-blue, $key: $colorKey);
+    // @debug $vs;
+    color: map-get($map: $tb-blue, $key: $colorKey);
+  }
+  .tb-color-bg--blue-#{$colorKey} {
+    //@debug $colorKey;
+
+    //$vs : map-get($map: $tb-blue, $key: $colorKey);
+    // @debug $vs;
+    background-color: map-get($map: $tb-blue, $key: $colorKey);
+  }
+}
+@each $colorKey in map-keys($tb-red) {
+  .tb-color--red-#{$colorKey} {
+    //@debug $colorKey;
+
+    //$vs : map-get($map: $tb-red, $key: $colorKey);
+    // @debug $vs;
+    color: map-get($map: $tb-red, $key: $colorKey);
+  }
+  .tb-color-bg--red-#{$colorKey} {
+    //@debug $colorKey;
+
+    //$vs : map-get($map: $tb-red, $key: $colorKey);
+    // @debug $vs;
+    background-color: map-get($map: $tb-red, $key: $colorKey);
+  }
+}
