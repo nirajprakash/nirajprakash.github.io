@@ -10,8 +10,12 @@
     }
 
     .content-container {
-        height: 100vh;
+        height: calc(100vh - 72px) ;
         max-height: 1080px;
+    }
+
+    .detail{
+        width: 70%;
     }
 
     &.xs {
@@ -34,6 +38,9 @@
         .illustration-area {
             // max-height: 200px;
             height: 40vh;
+        }
+        .detail{
+            width: unset;
         }
     }
 

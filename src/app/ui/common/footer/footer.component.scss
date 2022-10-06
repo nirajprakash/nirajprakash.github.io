@@ -1,0 +1,128 @@
+@function hexToCssRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+  }
+  
+  @function color($color-name) {
+    @return var(--#{$color-name});
+  }
+  
+  :host {
+    --color-gitter: #ea085d;
+    --color-gitter--rgb: #{hexToCssRGB(#ea085d)};
+    --color-discord: #119ae7;
+    --color-discord--rgb: #{hexToCssRGB(#119ae7)};
+  }
+  
+  .main {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid #0000000c;
+      // background-color: #151515;
+    }
+  
+  
+  
+    .footer{
+    }
+    .navigation-area{
+      padding: 12px  0px;
+    }
+    
+    .chat-area{
+      padding: 20px 16px;
+      border: 1px solid #0000000c;
+    }
+    
+    .unlink{
+      text-decoration: unset;
+    }
+    
+    .background {
+      // padding: 0px 0px 0px 40px;
+    }
+    
+    .logo {
+      max-width: 40px;
+      // position: absolute;
+      top: 0;
+      left: 0;
+    }
+    // .social {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 32px;
+    // }
+    .main {
+      &.xs {
+        .social {
+          position: absolute;
+          bottom: 58px;
+        }
+      }
+    }
+    .tb-typo--h2 {
+      font-size: 4rem !important;
+    }
+    .next-btn {
+      // filter: drop-shadow(0px 8px 4px rgba(0, 76, 255,0.6));
+    
+      img {
+        max-width: 90px;
+      }
+    }
+    .address p {
+      line-height: 18px;
+    }
+    
+    .footer {
+      p {
+      }
+    }
+    .greentoad {
+      p {
+        opacity: 0.6;
+        transition: all 0.1s ease-in-out;
+      }
+    
+      p:hover {
+        opacity: 1;
+        color: #1c9d57;
+      }
+    }
+    .circle {
+      border-radius: 100%;
+      background-color: #EF3232;
+      box-shadow: 4px 5px 12px -2px #EF3232;
+    }
+    
+    .arrow-back {
+      width: 16px;
+      height: 2px;
+      background-color: rgb(236, 236, 236);
+      z-index: 2;
+    }
+  
+  
+    
+  .link-btn {
+    // padding: 12px 16px;
+  
+    &.gitter {
+        // background: rgba(color(color-gitter--rgb), 0.05);
+        // border: solid 1px var(--color-gitter);
+  
+        .icon {
+            color: var(--color-gitter);
+        }
+    }
+  
+    &.discord {
+        // background: rgba(color(color-discord--rgb), 0.05);
+        // border: solid 1px var(--color-discord);
+  
+        .icon {
+            color: var(--color-discord);
+        }
+    }
+  }
+  

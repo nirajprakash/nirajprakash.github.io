@@ -8,17 +8,21 @@ import { MatSliderModule } from '@angular/material/slider';
 import {  MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../../@shared/shared.module';
 import { HomeTopComponent } from './home-top/home-top.component';
+import { HomeAboutComponent } from './home-about/home-about.component';
+import { FooterModule } from '../../common/footer/footer.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    HomeTopComponent
+    HomeTopComponent,
+    HomeAboutComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    MatButtonModule
+    MatButtonModule,
+    FooterModule
     
   ]
 })

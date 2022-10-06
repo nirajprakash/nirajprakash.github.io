@@ -5,23 +5,36 @@
             <!-- <div ngClass.gt-sm="tb-height--36" ngClass.sm="tb-height--20" ngClass.xs="tb-height--2"></div> -->
            
             <div ngClass.gt-sm="tb-height--126" ngClass.sm="tb-height--72" ngClass.xs="tb-height--72"></div>
-            <h4 [@transitionTextEnter]="{value:'in', params: {animDelay: 200}}" ngClass.gt-sm="current-typo--h3" ngClass.sm="current-typo--h4-bolder">Hi, I'am Niraj Prakash</h4>
-            <div ngClass.gt-sm="tb-height--24" ngClass.sm="tb-height--12" ngClass.xs="tb-height--12"></div>
+            <h4 [@transitionTextEnter]="{value:'in', params: {animDelay: 200}}" ngClass.gt-sm="current-typo--h4" 
+            ngClass.sm="current-typo--h5"
+            ngClass.xs="current-typo--h5"
+            >Hi, I'am Niraj Prakash</h4>
+            <div ngClass.gt-sm="tb-height--24" ngClass.sm="tb-height--12" 
+            ngClass.xs="tb-height--12"></div>
             <h2 [@transitionTextEnter]="{value:'in', params: {animDelay: 300}}"
-            ngClass.gt-sm="current-typo--h1-light" ngClass.sm="current-typo--h2-light">Love</h2>
+            ngClass.gt-sm="current-typo--h1-light" 
+            ngClass.sm="current-typo--h2-light"
+            
+            ngClass.xs="current-typo--h3">Love</h2>
        
             <h2 [@transitionTextEnter]="{value:'in', params: {animDelay: 400}}"
-                ngClass.gt-sm="current-typo--h1-light" ngClass.sm="current-typo--h2-light">to Craft Digital</h2>
+                ngClass.gt-sm="current-typo--h1-light" 
+                ngClass.sm="current-typo--h2-light"
+                ngClass.xs="current-typo--h3">to Craft Digital</h2>
             <h2 [@transitionTextEnter]="{value:'in', params: {animDelay: 500}}"
-                ngClass.gt-sm="current-typo--h1-light" ngClass.sm="current-typo--h2-light">products & things</h2>
+                ngClass.gt-sm="current-typo--h1-light" 
+                ngClass.sm="current-typo--h2-light"
+                ngClass.xs="current-typo--h3">products & things</h2>
             <!-- <h2 [@transitionTextEnter]="{value:'in', params: {animDelay: 600}}"
                  class="current-typo--h3"
                 ngClass.sm="current-typo--h3-light">Obsession to</h2> -->
                 <div ngClass.gt-sm="tb-height--24" ngClass.sm="tb-height--16" ngClass.xs="tb-height--8"></div>
 
                 <p [@transitionTextEnter]="{value:'in', params: {animDelay: 700}}"
-                (@transitionTextEnter.done)='_onTextAnimationEnd($event)' class="tb-color--black-38 current-typo--h4"
-                ngClass.sm="current-typo--h5-light">I’m an app developer and UI/UX designer experienced in making products for android and web. Currently, I am building an organization where new developer and designer can learn to make apps.</p>
+                (@transitionTextEnter.done)='_onTextAnimationEnd($event)' class="detail tb-color--black-38"
+                ngClass.gt-sm="current-typo--body1" 
+                ngClass.sm="current-typo--body1"
+                ngClass.xs="current-typo--body1">I’m an app developer and UI/UX designer experienced in making products for android and web. Currently, I am building an organization where new developer and designer can learn to make apps.</p>
         </div>
     </div>
 </div>

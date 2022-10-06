@@ -52,20 +52,20 @@ export class AppComponent {
       // .addSvgIcon('facebook',
       //   sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/facebook.svg'))
 
-      // .addSvgIcon('dribble',
-      //   sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/dribble.svg'))
+      .addSvgIcon('dribble',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/dribble.svg'))
 
-      // .addSvgIcon('github',
-      //   sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/github.svg'))
-      //   .addSvgIcon('instagram',
-      //   sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/instagram.svg'))
+      .addSvgIcon('github',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/github.svg'))
+        .addSvgIcon('instagram',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/instagram.svg'))
 
-      // .addSvgIcon('linkedin',
-      //   sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/linkedin3.svg'))
-      // .addSvgIcon('discord',
-      //   sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/discord.svg'))
-      // .addSvgIcon('gitter',
-      //   sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/gitter.svg'))
+      .addSvgIcon('linkedin',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/linkedin3.svg'))
+      .addSvgIcon('discord',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/discord.svg'))
+      .addSvgIcon('gitter',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/gitter.svg'))
 
     // .addSvgIcon('linked-in',
     //   sanitizer.bypassSecurityTrustResourceUrl('assets/svg/linked-in.svg'))
