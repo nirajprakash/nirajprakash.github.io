@@ -1,0 +1,21 @@
+.dialog-translucent {
+    .mat-dialog-container {
+        padding: 8px;
+        background-color: rgba($color: #000000, $alpha: 0.64);
+
+        .mat-toolbar{
+            background: unset;
+        }
+
+        .mat-drawer-container{
+            background-color: unset;
+            background: unset;
+
+        }
+
+        .mat-drawer-content{
+            background-color: unset;
+            background: unset;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@use '@angular/material' as mat;
+
+// @use '../treeform/theme/palette' as palette;
+@use 'variables' as localVar;
+/**
+                              connected with material theme
+*/
+
+@function mat-theme($primary, $accent, $warn, $shadowColor) {
+    @return (primary: $primary,
+        accent: $accent,
+        warn: $warn,
+        is-dark: true,
+        foreground: $shadowColor,
+        background: mat.$light-theme-background-palette
+    );
+}
+
+@function mat-theme-foreground($elevationColor) {
+    @return (base: black,
+        divider: localVar.$color-dark-dividers,
+        dividers: localVar.$color-dark-dividers,
+        disabled: localVar.$color-dark-disabled-text,
+        disabled-button: rgba(black, 0.26),
+        disabled-text: localVar.$color-dark-disabled-text,
+        elevation: $elevationColor,
+        hint-text: localVar.$color-dark-disabled-text,
+        secondary-text: localVar.$color-dark-secondary-text,
+        icon: rgba(black, 0.54),
+        icons: rgba(black, 0.54),
+        text: rgba(black, 0.87),
+        slider-min: rgba(black, 0.87),
+        slider-off: rgba(black, 0.26),
+        slider-off-active: rgba(black, 0.38),
+    );
+}
+
+@mixin color-modifiers($attribute: 'color') {
+    @each $name, $hex in $colors {
+      &-#{$name} {
+        #{$attribute}: $hex;
+      }
+    }
+  }

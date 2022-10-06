@@ -1,0 +1,94 @@
+@use "@angular/material" as mat;
+
+@use "../others/mat/function" as func;
+
+@use "./colors/palette" as palette;
+
+@use "./../theme/variables" as *;
+
+// @use 'function' as *;
+
+.current-primary {
+  $current-priamry-theme: func.mat-theme(
+    palette.$current-color-angular-webapp-primary,
+    palette.$current-color-angular-webapp-accent,
+    palette.$current-color-angular-webapp-warn,
+    func.mat-theme-foreground($tb-theme-primary)
+  );
+  @include mat.button-theme($current-priamry-theme);
+  @include mat.progress-spinner-theme($current-priamry-theme);
+}
+
+.current-secondary {
+  $current-secondary-theme: func.mat-theme(
+    palette.$current-color-angular-webapp-accent,
+    palette.$current-color-angular-webapp-accent,
+    palette.$current-color-angular-webapp-warn,
+    func.mat-theme-foreground($tb-theme-secondary)
+  );
+  @include mat.button-theme($current-secondary-theme);
+  @include mat.progress-spinner-theme($current-secondary-theme);
+}
+
+.junkie{
+  .mat-drawer-container {
+    background: linear-gradient(90deg, rgba(0,0,0, 0.02) 0%,  rgba(0,0,0,0.04) 100%);//#f6f5fa;// !important;
+    // background-color: #f6f5fa;// !important;
+  }
+  
+}
+
+.current-top-nav,
+.mat-toolbar.current-top-nav {
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0), 0 0px 0px rgba(0, 0, 0, 0);
+
+  // * {
+  //   transition: all 0.2s ease-in-out;
+  // }
+
+  &.active {
+    background-color: rgb(252, 252, 252, 0.9);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.08);
+  }
+
+  &-link {
+    position: relative;
+
+    transition: all 0.2s ease-in-out;
+
+    &:after {
+      transition: all 0.2s ease-in-out;
+      z-index: -1;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      width: 0px;
+      height: 6px;
+      background-color: rgba($color: $tb-theme-primary-light, $alpha: 1);
+      box-shadow: 0px 0px 0px rgba($color: $tb-theme-primary-light, $alpha: 0.1);
+      content: "";
+    }
+
+    &:hover {
+      // color:white;
+      &:after {
+        width: 60%;
+      }
+    }
+
+    &-active {
+      transition: all 0.2s ease-in-out;
+      overflow: hidden;
+      z-index: 1;
+      position: relative;
+
+      &:after {
+        width: 60%;
+        box-shadow: 0px 1px 3px rgba($color: $tb-theme-primary-light, $alpha: 0.3);
+      }
+    }
+  }
+}
