@@ -112,6 +112,40 @@ $current-color-red: (
   )
 );
 
+//066CE3
+$current-color-blue: (
+  50: #e6f0fc  ,
+  100: #cde1f9,
+  200: #9bc4f3,
+  300: #69a6ee,
+  400: #3789e8,
+  500: #066CE3,
+  600: #0561cc,
+  700: #0456b5,
+  800: #033671,
+  900: #012044,
+  A100: #c5defc,
+  A200: #8cbefa,
+  A400: #4395F7,
+  A700: #1279f5,
+  contrast: (
+    50: $current-color-dark-primary-text,
+    100: $current-color-dark-primary-text,
+    200: $current-color-dark-primary-text,
+    300: $current-color-light-primary-text,
+    400: $current-color-light-primary-text,
+    500: $current-color-light-primary-text,
+    600: $current-color-light-primary-text,
+    700: $current-color-light-primary-text,
+    800: $current-color-light-primary-text,
+    900: $current-color-light-primary-text,
+    A100: $current-color-dark-primary-text,
+    A200: $current-color-light-primary-text,
+    A400: $current-color-light-primary-text,
+    A700: $current-color-light-primary-text
+  )
+);
+
 
 
 

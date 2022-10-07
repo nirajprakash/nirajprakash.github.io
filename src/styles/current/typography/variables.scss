@@ -78,7 +78,7 @@ $current-typo-map: tbTypo(
       font-size: #{map-get(typo.$tb-typo-sizes, body1)}rem,
       /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, body1),
      
-      font-family: $font-jost,
+      font-family: $font-inter,
       text-decoration: inherit,
       text-transform: inherit
     ),
@@ -86,7 +86,7 @@ $current-typo-map: tbTypo(
       font-size: #{map-get(typo.$tb-typo-sizes, body2)}rem,
       /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, body2),
      
-      font-family: $font-jost,
+      font-family: $font-inter,
       text-decoration: inherit,
       text-transform: inherit
     ),
@@ -110,7 +110,7 @@ $current-typo-map: tbTypo(
       font-size: #{map-get(typo.$tb-typo-sizes, button)}rem,
       /* 60sp*/ line-height: map-get(typo.$tb-typo-line-height, button),
      
-      font-family: $font-jost,
+      font-family: $font-inter,
       text-decoration: none,
       text-transform: none
     ),
