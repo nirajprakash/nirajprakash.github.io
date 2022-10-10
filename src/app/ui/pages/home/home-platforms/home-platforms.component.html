@@ -1,0 +1,114 @@
+<div class="tb-position--relative main current" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+    <!-- <div class="tb-position--absolute tb-height--full"> -->
+    <!-- <div class="background-bar">
+
+        <div class="tb-container vertical-line-container" fxLayoutAlign="space-between stretch">
+            <div class="vertical-lines"></div>
+            <div class="vertical-lines"></div>
+            <div class="vertical-lines"></div>
+        </div>
+    </div> -->
+    <div class="tb-container tb-position--relative container">
+        <div fxLayout="column" fxLayoutAlign="start stretch">
+            <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
+
+            <h2 [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" ngClass.gt-sm="current-typo--h3-light"
+                ngClass.sm="current-typo--h3-light" ngClass.xs="current-typo--h4">My Platforms.</h2>
+
+            <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
+
+
+            <!-- card junkielabs -->
+            <div class="tb-position--relative card tb-color-bg--black-4">
+
+
+                <div class="ribbon ribbon-top-right"><span class="current-typo--h5">Open Source</span></div>
+
+                <div class="card-content tb-position--relative" fxLayout="row" fxLayout.xs="column">
+
+
+                    <div fxFlex="70" class="tb-position--relative" ngClass.gt-xs="tb-padding--right-16"
+                        ngClass.xs="tb-padding--bottom-24" fxLayout="column">
+                        <div class="tb-height--32">
+                            <img class="tb-image" src="assets/img/logos/junkielabs.png">
+                        </div>
+                        <div class="tb-height--12"></div>
+
+                        <h3 class="current-typo--h4">JunkieLabs</h3>
+                        <div class="tb-height--12"></div>
+                        <p class="current-typo--body1 tb-color--black-54">An Open Source Initiative to help those who
+                            need a good and common pattern to make app from scratch</p>
+
+
+                    </div>
+
+                    <div class="card-image-area" fxFlex.xs="none" fxFlex fxLayoutAlign="start center" fxLayout="column">
+
+                        <img class="image tb-position--relative" src="assets/img/illustrations/pic_junkielabs.png">
+
+                    </div>
+
+                    <div fxFlex fxFlex.xs="none" class="card-empty-space tb-width--76">
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <div ngClass.gt-xs="tb-height--32" ngClass.xs="tb-height--20"></div>
+
+            <!-- card thedroid -->
+            <div class="tb-position--relative card tb-color-bg--white current-elevation--2">
+                <div class="card-backgrond tb-position--absolute tb-height--full tb-width--full" fxLayout="row" fxLayout.xs="column">
+                
+                    <div class="overlay"></div>
+                    <img class="tb-image tb-position--relative" src="assets/img/illustrations/pic_thedroid.png">
+                    <div class="card-outline"></div>
+                  
+                </div>
+
+
+                <!-- <div class="ribbon ribbon-top-right"><span class="current-typo--h5">Open Source</span></div> -->
+
+                <div class="card-content tb-position--relative" fxLayout="row" fxLayout.xs="column">
+
+
+                    <div fxFlex="70" class="tb-position--relative" ngClass.gt-xs="tb-padding--right-16"
+                        ngClass.xs="tb-padding--bottom-24" fxLayout="column">
+                        <div class="tb-height--32">
+                            <img class="tb-image" src="assets/img/logos/thedroid_logo.png">
+                        </div>
+                        <div class="tb-height--12"></div>
+
+                        <h3 class="current-typo--h4">Thedroid.io</h3>
+                        <div class="tb-height--12"></div>
+                        <p class="current-typo--body1 tb-color--black-54">Freelance platform for app designing and
+                            Development</p>
+
+
+                    </div>
+
+                    <!-- <div class="card-image-area" fxFlex.xs="none" fxFlex fxLayoutAlign="start center" fxLayout="column">
+
+                        <img class="image tb-position--relative" src="assets/img/illustrations/pic_junkielabs.png">
+
+                    </div> -->
+
+                    <div fxFlex fxFlex.xs="none" class="card-empty-space tb-width--76">
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

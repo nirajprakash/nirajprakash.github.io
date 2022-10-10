@@ -12,6 +12,15 @@
         line-height: 0.7;
     }
 
+    .image-container {
+        flex-direction: column;
+        box-sizing: border-box;
+        display: flex;
+        place-content: stretch center;
+        align-items: stretch;
+        flex: 0 0 auto;
+    }
+
     .image-area {
         position: relative;
         // max-height: 63vh;
@@ -76,8 +85,16 @@
     }
 
     &.xs {
+        .image-container{
+            margin: 20px;
+        }
         .image-area {
-            width: unset;
+            width: 100%;
+
+            padding: unset;
+            .image {
+                width: 100%;
+            }
         }
     }
 }

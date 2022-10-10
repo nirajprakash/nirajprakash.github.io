@@ -1,0 +1,146 @@
+.tb-image {
+  object-fit: contain;
+  line-height: unset;
+  max-height: 100%;
+  max-width: 100%;
+
+  &--cover{
+    
+  object-fit: cover;
+  }
+}
+
+
+.tb-avatar {
+  object-fit: cover;
+  line-height: unset;
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.tb-avatar--20 {
+  object-fit: cover;
+  line-height: unset;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+}
+
+.tb-avatar--24 {
+  object-fit: cover;
+  line-height: unset;
+  border-radius: 100%;
+  height: 24px;
+  width: 24px;
+}
+
+.tb-avatar--28 {
+  object-fit: cover;
+  line-height: unset;
+  border-radius: 100%;
+  height: 28px;
+  width: 28px;
+}
+
+.tb-avatar--32 {
+  object-fit: cover;
+  line-height: unset;
+  border-radius: 100%;
+  height: 32px !important;
+  width: 32px !important;
+}
+
+.tb-avatar--36 {
+  object-fit: cover;
+  line-height: unset;
+  border-radius: 100%;
+  height: 36px !important;
+  width: 36px !important;
+}
+
+.tb-avatar--40 {
+  object-fit: cover;
+  line-height: unset;
+  border-radius: 100%;
+  height: 40px !important;
+  width: 40px !important;
+}
+
+.tb-avatar--48 {
+  object-fit: cover;
+  line-height: unset;
+  border-radius: 100%;
+  height: 48px !important;
+  width: 48px !important;
+}
+
+.tb-avatar--56 {
+  object-fit: cover;
+  line-height: unset;
+  border-radius: 100%;
+  height: 56px !important;
+  width: 56px !important;
+}
+
+.tb-avatar--64 {
+  object-fit: cover;
+  line-height: unset;
+  border-radius: 100%;
+  height: 64px;
+  width: 64px;
+}
+
+// .tb-avatar {
+//   height: auto;
+//   width: auto;
+//   max-height: 100%;
+//   max-width: 100%;
+// }
+// .tb-avatar--20 {
+//   height: auto;
+//   width: auto;
+//   max-height: 20px;
+//   max-width: 20px;
+// }
+// .tb-avatar--24 {
+//   height: auto;
+//   width: auto;
+//   max-height: 24px;
+//   max-width: 24px;
+// }
+
+// .tb-avatar--28 {
+//   height: auto;
+//   width: auto;
+//   max-height: 28px;
+//   max-width: 28px;
+// }
+
+// .tb-avatar--32 {
+//   height: auto;
+//   width: auto;
+//   max-height: 32px !important;
+//   max-width: 32px !important;
+// }
+
+// .tb-avatar--40 {
+//   height: auto;
+//   width: auto;
+//   max-height: 40px !important;
+//   max-width: 40px !important;
+// }
+
+// .tb-avatar--56 {
+//   height: auto;
+//   width: auto;
+//   max-height: 56px !important;
+//   max-width: 56px !important;
+// }
+
+// .tb-avatar--64 {
+//   height: auto;
+//   width: auto;
+//   max-height: 64px;
+//   max-width: 64px;
+// }

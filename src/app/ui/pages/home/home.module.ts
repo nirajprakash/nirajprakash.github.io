@@ -10,12 +10,14 @@ import { SharedModule } from '../../@shared/shared.module';
 import { HomeTopComponent } from './home-top/home-top.component';
 import { HomeAboutComponent } from './home-about/home-about.component';
 import { FooterModule } from '../../common/footer/footer.module';
+import { HomePlatformsComponent } from './home-platforms/home-platforms.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     HomeTopComponent,
-    HomeAboutComponent
+    HomeAboutComponent,
+    HomePlatformsComponent
   ],
   imports: [
     CommonModule,
