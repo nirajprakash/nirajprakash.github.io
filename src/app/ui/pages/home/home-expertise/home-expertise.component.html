@@ -20,14 +20,17 @@
 
             <div fxLayout.gt-xs="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
 
-                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}" fxFlex.gt-xs="46" fxFlex.xs="none" [isColored]="true" jobType="Design"
-                    [parts]='["UI/UX",  "Logo" , "Prototyping"]'></app-expertise-item>
-                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}" fxFlex.gt-xs="46" fxFlex.xs="none" jobType="Android Development"
+                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}" fxFlex.gt-xs="46"
+                    fxFlex.xs="none" [isColored]="true" jobType="Design" [parts]='["UI/UX",  "Logo" , "Prototyping"]'>
+                </app-expertise-item>
+                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}" fxFlex.gt-xs="46"
+                    fxFlex.xs="none" jobType="Android Development"
                     [parts]='["Jetpack Compose" , "Architecture Component"]'></app-expertise-item>
-                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:400}}" fxFlex.gt-xs="46" fxFlex.xs="none" jobType="Web Development"
-                    [parts]='[ "Angular" , "React"]'></app-expertise-item>
-                <app-expertise-item  [@transitionText]="{value:_mTriggerAnim, params:{animDelay:500}}" fxFlex.gt-xs="46" fxFlex.xs="none" jobType="Cross Platform Development"
-                    [parts]='[ "Flutter", "Jetbrain Compose"]'></app-expertise-item>
+                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:400}}" fxFlex.gt-xs="46"
+                    fxFlex.xs="none" jobType="Web Development" [parts]='[ "Angular" , "React"]'></app-expertise-item>
+                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:500}}" fxFlex.gt-xs="46"
+                    fxFlex.xs="none" jobType="Cross Platform Development" [parts]='[ "Flutter", "Jetbrain Compose"]'>
+                </app-expertise-item>
             </div>
 
             <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
@@ -39,6 +42,33 @@
                 <div fxFlex="60" class="line tb-color-bg--black"></div>
                 <div fxFlex class=""></div>
             </div>
+            <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
+
+            <div fxLayout="row wrap"  fxLayoutGap="16" fxLayoutGap.xs="8">
+
+                <ng-container *ngFor="let tool of _mTools">
+
+                    <a class="tool unlink current-elevation--2"
+                    
+                    [style.backgroundColor]='tool?.color ?? "#fff" '
+
+                    fxLayout="row" fxLayoutGap="8" fxLayoutAlign="start center"
+                     target="_blank" rel="noopener" [href]="tool.link" >
+
+                        <div class="tool-image-area">
+
+                            <img class="tb-image" [src]="tool.logo"/>
+                        </div>
+    
+                        <h5 class="current-typo--h5" [style.color]='tool?.color ? "#fff" : "#000"'  ngClass.xs="current-typo--h6">{{tool.name}}</h5>
+    
+                    </a>
+                </ng-container>
+               
+            </div>
+
+
+
 
         </div>
     </div>
