@@ -1,0 +1,10 @@
+<div class="main tb-position--relative" ngClass.xs="xs" ngClass.sm="sm"  fxLayout="column"  #animRefView>
+    <div class="background"  [class.tb-theme-bg--secondary]="_mIsColored" ></div>
+    
+    <div fxLayout="column" fxLayoutGap="6" class="content tb-position--relative" [class.tb-theme-bg--primary]="_mIsColored">
+
+        <h4 class="current-typo--h4 tb-color--black-87" [class.tb-color--white-87]="_mIsColored">{{_mJobType}}</h4>
+        <h5 class="current-typo--h5 tb-color--black-54" [class.tb-color--white-54]="_mIsColored">{{_mParts}}</h5>
+
+    </div>
+</div>

@@ -147,6 +147,39 @@ $current-color-blue: (
 );
 
 
+$current-color-pink: (
+  50: #fdedf0  ,
+  100: #fcdce2  ,
+  200: #f9b9c5,
+  300: #f696a8,
+  400: #f3738b,
+  500: #F1516E,
+  600: #d84863,
+  700: #c04058,
+  800: #782837,
+  900: #481821,
+  A100: #c5defc,
+  A200: #ffe9e9,
+  A400: #ff9f9c,
+  A700: #e14361,
+  contrast: (
+    50: $current-color-dark-primary-text,
+    100: $current-color-dark-primary-text,
+    200: $current-color-dark-primary-text,
+    300: $current-color-light-primary-text,
+    400: $current-color-light-primary-text,
+    500: $current-color-light-primary-text,
+    600: $current-color-light-primary-text,
+    700: $current-color-light-primary-text,
+    800: $current-color-light-primary-text,
+    900: $current-color-light-primary-text,
+    A100: $current-color-dark-primary-text,
+    A200: $current-color-light-primary-text,
+    A400: $current-color-light-primary-text,
+    A700: $current-color-light-primary-text
+  )
+);
+
 
 
 $current-color-primary: $current-color-black;

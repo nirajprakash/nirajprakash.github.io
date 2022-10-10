@@ -1,0 +1,45 @@
+<div class="tb-position--relative main current" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+    <!-- <div class="tb-position--absolute tb-height--full"> -->
+    <!-- <div class="background-bar">
+
+        <div class="tb-container vertical-line-container" fxLayoutAlign="space-between stretch">
+            <div class="vertical-lines"></div>
+            <div class="vertical-lines"></div>
+            <div class="vertical-lines"></div>
+        </div>
+    </div> -->
+    <div class="tb-container tb-position--relative container">
+        <div fxLayout="column" fxLayoutAlign="start stretch">
+            <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
+
+            <h2 [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" ngClass.gt-sm="current-typo--h3-light"
+                ngClass.sm="current-typo--h3-light" ngClass.xs="current-typo--h4">Expertise.</h2>
+
+            <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
+
+
+            <div fxLayout.gt-xs="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
+
+                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}" fxFlex.gt-xs="46" fxFlex.xs="none" [isColored]="true" jobType="Design"
+                    [parts]='["UI/UX",  "Logo" , "Prototyping"]'></app-expertise-item>
+                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}" fxFlex.gt-xs="46" fxFlex.xs="none" jobType="Android Development"
+                    [parts]='["Jetpack Compose" , "Architecture Component"]'></app-expertise-item>
+                <app-expertise-item [@transitionText]="{value:_mTriggerAnim, params:{animDelay:400}}" fxFlex.gt-xs="46" fxFlex.xs="none" jobType="Web Development"
+                    [parts]='[ "Angular" , "React"]'></app-expertise-item>
+                <app-expertise-item  [@transitionText]="{value:_mTriggerAnim, params:{animDelay:500}}" fxFlex.gt-xs="46" fxFlex.xs="none" jobType="Cross Platform Development"
+                    [parts]='[ "Flutter", "Jetbrain Compose"]'></app-expertise-item>
+            </div>
+
+            <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
+
+            <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:600}}" fxLayout="row"
+                fxLayoutAlign="start end">
+                <h4 class="tools-title current-typo--h4 tb-flex--shrink-0">Tools and Technologies.</h4>
+                <div class="tb-width--12"></div>
+                <div fxFlex="60" class="line tb-color-bg--black"></div>
+                <div fxFlex class=""></div>
+            </div>
+
+        </div>
+    </div>
+</div>

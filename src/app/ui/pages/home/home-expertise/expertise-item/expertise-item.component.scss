@@ -1,0 +1,29 @@
+.main {
+    margin: 8px 0px;
+    
+    .background {
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        bottom: -8px;
+        right: -6px;
+    }
+    .content {
+        box-sizing: border-box;
+        z-index: 1;
+        padding: 32px 32px;
+    }
+
+    .sm {
+        .content {
+            padding: 24px 24px;
+        }
+    }
+
+    .xs {
+        .content {
+            padding: 24px 24px;
+        }
+    }
+}
