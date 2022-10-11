@@ -14,6 +14,10 @@ import { HomePlatformsComponent } from './home-platforms/home-platforms.componen
 import { HomeExpertiseComponent } from './home-expertise/home-expertise.component';
 import { ExpertiseItemComponent } from './home-expertise/expertise-item/expertise-item.component';
 import { TechItemComponent } from './home-expertise/tech-item/tech-item.component';
+import { HomeContactComponent } from './home-contact/home-contact.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,14 +27,20 @@ import { TechItemComponent } from './home-expertise/tech-item/tech-item.componen
     HomePlatformsComponent,
     HomeExpertiseComponent,
     ExpertiseItemComponent,
-    TechItemComponent
+    TechItemComponent,
+    HomeContactComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SharedModule,
     MatButtonModule,
-    FooterModule
+    FooterModule,
+    ReactiveFormsModule,
+    FormsModule,
+    
+    MatFormFieldModule,
+    MatInputModule,
     
   ]
 })

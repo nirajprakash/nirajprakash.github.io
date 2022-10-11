@@ -1,0 +1,27 @@
+.main {
+    // overflow-x: hidden;
+    .container {
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+
+    .form-area {
+        padding: 20px 48px;
+    }
+
+    .connect-detail{
+        width: 70%;
+    }
+
+    .underline{
+        -webkit-text-decoration-line: underline;
+        text-decoration-line: underline;
+    }
+
+    &.xs{
+
+        .form-area {
+            padding: 20px 28px;
+        }
+    }
+}

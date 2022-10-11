@@ -1,0 +1,74 @@
+<div class="tb-position--relative main current" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+
+    <div class="tb-container tb-position--relative container">
+        <div fxLayout="column" fxLayoutAlign="start stretch">
+
+
+            <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
+
+            <h2 [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" ngClass.gt-sm="current-typo--h3-light"
+                ngClass.sm="current-typo--h3-light" ngClass.xs="current-typo--h4">Get In Touch .</h2>
+
+            <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
+
+            <div class="form-area tb-color-bg--black-2 tb-border--r6" fxLayout="column" fxLayoutAlign="start stretch">
+                <div ngClass.gt-xs="tb-height--32" ngClass.xs="tb-height--20"></div>
+                <h4 [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}" class="tb-text-align--center" ngClass.gt-xs="current-typo--h4" ngClass.xs="current-typo--h5">
+                    Interested in working together with me ? </h4>
+                <form [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 300}}"   fxLayout="column" [formGroup]="_mFormGroup">
+                    <div ngClass.gt-xs="tb-height--32" ngClass.xs="tb-height--20"></div>
+                    <div fxLayout.gt-xs="row" fxLayoutGap.gt-xs="56" fxLayout.xs="column">
+
+                        <mat-form-field appearance="standard" class="tb-width--full">
+                            <mat-label>Your Name</mat-label>
+                            <input matInput formControlName="name" type="text" placeholder="">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="standard" class="tb-width--full">
+                            <mat-label>Your Email</mat-label>
+                            <input matInput formControlName="email" type="email" placeholder="">
+                        </mat-form-field>
+                    </div>
+                    <div ngClass.gt-xs="tb-height--20" ngClass.xs="tb-height--0"></div>
+                    <mat-form-field appearance="standard" class="tb-width--full">
+                        <mat-label>Extra details</mat-label>
+                        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="4"
+                            cdkAutosizeMaxRows="8" class="tb-width--full" placeholder="Write Something..."
+                            formControlName="details"></textarea>
+                    </mat-form-field>
+                    <div ngClass.gt-xs="tb-height--20" ngClass.xs="tb-height--12"></div>
+
+                    <div class="" fxFlexAlign="end">
+
+                        <!-- [disabled]="!_mFormGroup.valid" -->
+                        <button *ngIf="!_mInProgress" mat-raised-button color="primary" type="submit"
+                            [disabled]="!_mFormGroup.valid" (click)="_onSubmit()" class=" current-typo--button"><span
+                                class="current-typo--button tb-padding--16-24">Send
+                                Message</span></button>
+                    </div>
+                    <div ngClass.lt-md="tb-padding--v-12" ngClass.gt-sm="tb-padding--v-36"></div>
+
+                </form>
+
+            </div>
+
+            <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
+            <h4 [@transitionText]="{value:_mTriggerAnim,  params: {animDelay: 400}}" class="tb-color--black" ngClass.gt-xs="current-typo--h4" ngClass.xs="current-typo--h5">Or</h4>
+
+
+
+            <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
+
+            <p [@transitionText]="{value:_mTriggerAnim,  params: {animDelay: 500}}"
+                class="connect-detail tb-color--black-38" ngClass.gt-sm="current-typo--body1"
+                ngClass.sm="current-typo--body1" ngClass.xs="current-typo--body1">
+                Feel free to reach out if you have a question or just want to connect.</p>
+            <div ngClass.gt-xs="tb-height--24" ngClass.xs="tb-height--16"></div>
+
+            <!-- <h4 class="tb-color--black" ngClass.gt-xs="current-typo--h4" ngClass.xs="current-typo--h5">Or</h4> -->
+            <div  [@transitionText]="{value:_mTriggerAnim,  params: {animDelay: 600}}" class="underline"><a class="tb-color--black" ngClass.gt-xs="current-typo--h4 " ngClass.xs="current-typo--h5"
+                    href="mailto:nirajprakash13+connect@gmail.com">nirajprakash13@gmail.com</a></div>
+
+        </div>
+    </div>
+</div>
