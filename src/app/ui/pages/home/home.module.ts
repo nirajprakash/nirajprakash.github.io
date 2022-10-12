@@ -18,6 +18,8 @@ import { HomeContactComponent } from './home-contact/home-contact.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HomeShowcasesComponent } from './home-showcases/home-showcases.component';
+import { AppItemComponent } from './home-showcases/app-item/app-item.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     HomeExpertiseComponent,
     ExpertiseItemComponent,
     TechItemComponent,
-    HomeContactComponent
+    HomeContactComponent,
+    HomeShowcasesComponent,
+    AppItemComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,96 @@
+<div class="tb-position--relative main current" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+
+    <div class="tb-container tb-position--relative container">
+        <div fxLayout="column" fxLayoutAlign="start stretch">
+
+
+            <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
+
+            <h2 [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" ngClass.gt-sm="current-typo--h3-light"
+                ngClass.sm="current-typo--h3-light" ngClass.xs="current-typo--h4">Showcases.</h2>
+            <div ngClass.gt-xs="tb-height--48" ngClass.xs="tb-height--20"></div>
+
+            <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" fxLayout="row"
+                fxLayoutAlign="start end">
+                <h4 class="section-title current-typo--h4 tb-flex--shrink-0">Recent Client App.</h4>
+                <div class="tb-width--12"></div>
+                <div fxFlex="60" class="line tb-color-bg--black"></div>
+                <div fxFlex class=""></div>
+            </div>
+
+
+
+            <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
+
+            <p [@transitionText]="{value:_mTriggerAnim,  params: {animDelay: 500}}"
+                class="section-detail tb-color--black-38" ngClass.gt-sm="current-typo--body1"
+                ngClass.sm="current-typo--body1" ngClass.xs="current-typo--body1">
+                I’m an app developer and UI/UX designer experienced in making products for android and web. I have built
+                over 30+ products in last 5 years.</p>
+
+            <div ngClass.gt-xs="tb-height--40" ngClass.xs="tb-height--20"></div>
+
+            <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap.gt-xs="8"
+                fxLayoutAlign.gt-xs="space-between center" fxLayoutAlign.xs="start stretch">
+                <ng-container *ngFor="let app of _mClientApps">
+
+
+                    <app-app-item [name]="app.name" [link]="app.link" [image]="app.image"></app-app-item>
+                </ng-container>
+            </div>
+            <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
+
+            <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--24"></div>
+
+            <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" fxLayout="row"
+                fxLayoutAlign="start end">
+                <h4 class="section-title current-typo--h4 tb-flex--shrink-0">Icons.</h4>
+                <div class="tb-width--12"></div>
+                <div fxFlex="60" class="line tb-color-bg--black"></div>
+                <div fxFlex class=""></div>
+            </div>
+            <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
+
+            <div class="icon-area-full tb-color-bg--white"></div>
+            <div class="tb-height--12"></div>
+            <div class="" fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="12">
+                <div fxFlex.gt-xs="65" fxFlex.xs="none" class="icon-area-full tb-color-bg--green-300"></div>
+                <div fxFlex.gt-xs="35" fxFlex.xs="none" class="icon-area-full tb-color-bg--blue-300"></div>
+
+            </div>
+
+            <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
+            <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--24"></div>
+
+
+            <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" fxLayout="row"
+                fxLayoutAlign="start end">
+                <h4 class="section-title current-typo--h4 tb-flex--shrink-0">Logos.</h4>
+                <div class="tb-width--12"></div>
+                <div fxFlex="60" class="line tb-color-bg--black"></div>
+                <div fxFlex class=""></div>
+            </div>
+            <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
+
+            <div class="logos-area" fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutAlign.gt-xs="start center"
+                fxLayoutAlign.xs="start start" fxLayoutGap="12">
+                <div fxFlex="13" class="logo-area logo-area-small tb-color-bg--green-300"></div>
+                <div class="logo-area-row" fxFlex="17" fxLayout.xs="row" fxLayout.gt-xs="column" fxLayoutGap="12">
+                    <div fxFlex="35" class="logo-area logo-area-1 tb-color-bg--blue-300"></div>
+                    <div fxFlex="65" class="logo-area logo-area-2 tb-color-bg--orange-300"></div>
+
+                </div>
+                <div fxFlex="40" class="logo-area logo-area-large tb-color-bg--red-300"></div>
+                <div class="logo-area-row" fxFlex="17" fxLayout.xs="row" fxLayout.gt-xs="column" fxLayoutGap="12">
+                    <div fxFlex="65" class="logo-area logo-area-2 tb-color-bg--orange-300"></div>
+                    <div fxFlex="35" class="logo-area logo-area-1 tb-color-bg--blue-300"></div>
+                </div>
+                <div fxFlex="13" class="logo-area logo-area-small tb-color-bg--green-300"></div>
+            </div>
+
+            <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
+            <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--24"></div>
+
+        </div>
+    </div>
+</div>

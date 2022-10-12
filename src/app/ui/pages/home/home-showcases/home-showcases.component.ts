@@ -1,24 +1,21 @@
 import { ScrollDispatcher, ViewportRuler } from '@angular/cdk/scrolling';
 import { ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { MediaObserver } from '@angular/flex-layout';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { ReplaySubject, takeUntil, startWith, map, scan, distinctUntilChanged, takeWhile, switchMap, Observable } from 'rxjs';
-import { TRANSITION_IMAGE_SCALE, TRANSITION_TEXT } from 'src/app/ui/animations/transitions/transitions.constants';
+import { TRANSITION_TEXT, TRANSITION_IMAGE_SCALE } from 'src/app/ui/animations/transitions/transitions.constants';
 import { UiUtilsView } from 'src/app/ui/utils/views.utils';
 
 @Component({
-  selector: 'app-home-contact',
-  templateUrl: './home-contact.component.html',
-  styleUrls: ['./home-contact.component.scss'],
+  selector: 'app-home-showcases',
+  templateUrl: './home-showcases.component.html',
+  styleUrls: ['./home-showcases.component.scss'],
   animations: [
     TRANSITION_TEXT,
     TRANSITION_IMAGE_SCALE
   ]
 })
-export class HomeContactComponent implements OnInit {
-  _mFormGroup: FormGroup;
-
-  _mInProgress = false;
+export class HomeShowcasesComponent implements OnInit {
 
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
   mOnceAnimated = false
@@ -42,12 +39,7 @@ export class HomeContactComponent implements OnInit {
     private scroll: ScrollDispatcher, private viewPortRuler: ViewportRuler,
     private formBuilder: FormBuilder) {
 
-    this._mFormGroup = this.formBuilder.group({
-      // purpose: [''],
-      name: ['', Validators.required],
-      email: ['', Validators.required],
-      details: ['', Validators.required],
-    });
+    
 
   }
 
@@ -66,31 +58,7 @@ export class HomeContactComponent implements OnInit {
     this.destroyed$.complete()
   }
 
-  /* ******************************************************************************
-   *                                        Form
-   */
-
-  _onSubmit(): void {
-    this._mInProgress = true;
-    // this.apiHumanService
-    //   .updateHuman(this._mFormGroup.value)
-    //   .subscribe((response) => {
-    //     console.log(response);
-    //     this.ngrxActionHumanUpdate(response);
-    //     this._mInProgress = false;
-    //     this._closeDialog();
-    //   });
-  }
-
-
-  resetForm(): void {
-    this._mFormGroup.reset();
-    // this._mInputLabelImage = null;
-    // this.updateLabelActive();
-    // this._mModel.txt = null;
-    // this.downloadableURL = '';
-  }
-
+  
 
 
   /* ***************************************************************************
@@ -150,5 +118,36 @@ export class HomeContactComponent implements OnInit {
 
     )
   }
+
+  /* ************************************************************************************
+   * 
+   */
+
+  _mClientApps = [
+
+    {
+     "id": "5131",
+     "name": "PepPlus: For Academic Growth",
+     "image": "assets/img/tools/figma.svg",
+     "link": "https://play.google.com/store/apps/details?id=com.pepstudy.pepplus",
+     "tab": "Android"
+   },
+
+
+   {
+     "id": "5132",
+     "name": "WhichOne Shop: Amazon Flipkart",
+     "image": "assets/img/tools/ps.png",
+     "link": "https://play.google.com/store/apps/details?id=com.whichone",
+     "tab": "Flutter"
+   },
+   {
+     "id": "5133",
+     "name": "Aabboo - Anonymous Chat Rooms",
+     "image": "assets/img/tools/ai.svg",
+     "link": "https://play.google.com/store/apps/details?id=com.aabboo.social",
+     "tab": "Android"
+   }
+  ];
 
 }
