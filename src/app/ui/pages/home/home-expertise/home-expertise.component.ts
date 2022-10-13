@@ -108,15 +108,15 @@ export class HomeExpertiseComponent implements OnInit {
 
   _mTools = [
 
-     // design
-     {
+    // design
+    {
       "id": "5131",
       "name": "Figma",
       "logo": "assets/img/tools/figma.svg",
-      "link": "https://www.adobe.com/products/xd.html",
+      "link": "https://www.figma.com/",
       "tab": "design"
     },
-     {
+    {
       "id": "5131",
       "name": "Adobe XD",
       "logo": "assets/img/tools/xd.png",
@@ -146,13 +146,7 @@ export class HomeExpertiseComponent implements OnInit {
       "tab": "design"
     },
 
-    {
-      "id": "5131",
-      "name": "Adobe XD",
-      "logo": "assets/img/tools/xd.png",
-      "link": "https://www.adobe.com/products/xd.html",
-      "tab": "design"
-    },
+
 
     // android
     {
@@ -161,14 +155,7 @@ export class HomeExpertiseComponent implements OnInit {
       "logo": "assets/img/tools/android.svg",
       "link": "https://developer.android.com/",
       "tab": "android",
-      "color":"#3DDC84"
-    },
-    {
-      "id": "9111",
-      "name": "Glide",
-      "logo": "assets/img/tools/glide.png",
-      "link": "https://github.com/bumptech/glide/releases/tag/v3.7.0",
-      "tab": "android"
+      "color": "#3DDC84"
     },
     {
       "id": "9112",
@@ -186,34 +173,44 @@ export class HomeExpertiseComponent implements OnInit {
     },
     {
       "id": "9114",
-      "name": "Jetpack",
-      "logo": "assets/img/tools/jetpack-logo.png",
-      "link": "https://developer.android.com/jetpack",
+      "name": "Jetpack Compose",
+      "logo": "assets/img/tools/pic_jetpack_compose.png",
+      "link": "https://developer.android.com/jetpack/compose",
       "tab": "android"
     },
     {
       "id": "9115",
-      "name": "LeakCanary",
-      "logo": "assets/img/tools/leak-canary.png",
-      "link": "https://github.com/nirajprakash/porfolio/blob/master/src/app/ui/onepage/onepage.component.html",
+      "name": "Architecture Components",
+      "logo": "assets/img/tools/pic_architecture_components.png",
+      "link": "https://developer.android.com/topic/architecture",
       "tab": "android"
+    },
+    {
+      "id": "9116",
+      "name": "Kotlin",
+      "logo": "assets/img/tools/kotlin-logo.png",
+      "link": "https://kotlinlang.org/",
+      "tab": "android"
+    },
+
+    // cross
+{
+      "id": "4101",
+      "name": "Flutter",
+      "logo": "assets/img/tools/flutter_logo.svg",
+      "link": "https://flutter.dev/",
+      "tab": "Cross",
+      "color": "#42A5F5"
     },
 
     // web
 
-    {
-      "id": "8101",
-      "name": "Angular",
-      "logo": "assets/img/tools/angular.png",
-      "link": "https://angular.io/",
-      "tab": "web",
-      "color":"#FF4369"
-    },
+    
 
     {
       "id": "8102",
       "name": "Polymer",
-      "logo": "assets/img/tools/polymer.png",
+      "logo": "assets/img/tools/polymer.svg",
       "link": "https://www.polymer-project.org/",
       "tab": "web"
     },
@@ -226,13 +223,6 @@ export class HomeExpertiseComponent implements OnInit {
       "tab": "web"
     },
     {
-      "id": "8104",
-      "name": "MDL",
-      "logo": "assets/img/tools/getmdl.png",
-      "link": "https://getmdl.io/",
-      "tab": "web"
-    },
-    {
       "id": "8105",
       "name": "HighCharts js",
       "logo": "assets/img/tools/highchart-logo.png",
@@ -240,25 +230,41 @@ export class HomeExpertiseComponent implements OnInit {
       "tab": "web"
     },
     {
-      "id": "8106",
-      "name": "D3 js",
-      "logo": "assets/img/tools/d3-logo.png",
-      "link": "https://d3js.org/",
-      "tab": "web"
-    },
-    {
-      "id": "8107",
-      "name": "Bootstrap",
-      "logo": "assets/img/tools/bootstrap.png",
-      "link": "https://getbootstrap.com/",
-      "tab": "web"
-    },
-    {
       "id": "8108",
       "name": "Sass",
       "logo": "assets/img/tools/sass-logo.svg",
       "link": "https://sass-lang.com/",
+      "tab": "web",
+      "color": "#CF649A"
+    },
+    {
+      "id": "8106",
+      "name": "D3 js",
+      "logo": "assets/img/tools/d3.svg",
+      "link": "https://d3js.org/",
       "tab": "web"
+    },
+    {
+      "id": "8104",
+      "name": "Ngrx",
+      "logo": "assets/img/tools/ngrx.svg",
+      "link": "https://ngrx.io/",
+      "tab": "web"
+    },
+    {
+      "id": "8101",
+      "name": "Angular",
+      "logo": "assets/img/tools/angular.png",
+      "link": "https://angular.io/",
+      "tab": "web",
+      "color": "#FF4369"
+    },
+    {
+      "id": "8109",
+      "name": "Scully",
+      "logo": "assets/img/tools/scully.svg",
+      "link": "https://https://scully.io/",
+      "tab": "web",
     },
 
     // backend
@@ -277,11 +283,11 @@ export class HomeExpertiseComponent implements OnInit {
       "link": "http://docs.sequelizejs.com/",
       "tab": "back-end"
     },
-    
+
     {
       "id": "7126",
       "name": "NodeJs",
-      "logo": "assets/img/tools/nodejs-logo.png",
+      "logo": "assets/img/tools/nodejs.png",
       "link": "https://nodejs.org/en/",
       "tab": "back-end"
     },
@@ -291,11 +297,11 @@ export class HomeExpertiseComponent implements OnInit {
     {
       "id": "6121",
       "name": "Firebase",
-      "logo": "assets/img/tools/firebase.png",
+      "logo": "assets/img/tools/firebase.svg",
       "link": "https://firebase.google.com/",
       "tab": "cloud"
     },
-   
+
     {
       "id": "6123",
       "name": "Azure",
@@ -312,7 +318,7 @@ export class HomeExpertiseComponent implements OnInit {
       "tab": "cloud"
     },
 
-   
+
   ]
 
 }
