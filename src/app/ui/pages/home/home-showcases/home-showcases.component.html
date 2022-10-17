@@ -35,7 +35,8 @@
                 <ng-container *ngFor="let app of _mClientApps">
 
 
-                    <app-app-item [name]="app.name" [link]="app.link" [image]="app.image"></app-app-item>
+                    <app-app-item [name]="app.name" [link]="app.link" [image]="app.image" [color]="app.color">
+                    </app-app-item>
                 </ng-container>
             </div>
             <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
@@ -74,18 +75,36 @@
 
             <div class="logos-area" fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutAlign.gt-xs="start center"
                 fxLayoutAlign.xs="start start" fxLayoutGap="12">
-                <div fxFlex="13" class="logo-area logo-area-small tb-color-bg--green-300"></div>
-                <div class="logo-area-row" fxFlex="17" fxLayout.xs="row" fxLayout.gt-xs="column" fxLayoutGap="12">
-                    <div fxFlex="35" class="logo-area logo-area-1 tb-color-bg--blue-300"></div>
-                    <div fxFlex="65" class="logo-area logo-area-2 tb-color-bg--orange-300"></div>
+                <div fxFlex.gt-xs="13" class="logo-area logo-area-small tb-color-bg--green-300">
+                    <img class="tb-image image" src="assets/img/logos/bloom_fly.png" />
+                </div>
+                <div class="logo-area-row" fxFlex.gt-xs="17" fxLayout.xs="row" fxLayout.gt-xs="column" fxLayoutGap="12">
+                    <div fxFlex="35" class="logo-area logo-area-1 tb-color-bg--blue-300">
+
+                        <img class="tb-image image" src="assets/img/logos/nest2.png" />
+                    </div>
+                    <div fxFlex="65" class="logo-area logo-area-2 tb-color-bg--orange-300">
+
+                        <img class="tb-image image" src="assets/img/logos/fist_burn.png" />
+                    </div>
 
                 </div>
-                <div fxFlex="40" class="logo-area logo-area-large tb-color-bg--red-300"></div>
-                <div class="logo-area-row" fxFlex="17" fxLayout.xs="row" fxLayout.gt-xs="column" fxLayoutGap="12">
-                    <div fxFlex="65" class="logo-area logo-area-2 tb-color-bg--orange-300"></div>
-                    <div fxFlex="35" class="logo-area logo-area-1 tb-color-bg--blue-300"></div>
+                <div fxFlex.gt-xs="40" class="logo-area logo-area-large tb-color-bg--red-300">
+                    <img class="tb-image image" src="assets/img/logos/lizard.png" />
                 </div>
-                <div fxFlex="13" class="logo-area logo-area-small tb-color-bg--green-300"></div>
+                <div class="logo-area-row" fxFlex.gt-xs="17" fxLayout.xs="row" fxLayout.gt-xs="column" fxLayoutGap="12">
+                    <div fxFlex="65" class="logo-area logo-area-2 tb-color-bg--orange-300">
+                        <img class="tb-image image" src="assets/img/logos/surya_namaskar.png" />
+                    </div>
+                    <div fxFlex="35" class="logo-area logo-area-1 tb-color-bg--blue-300">
+                        <img class="tb-image image" src="assets/img/logos/matka_lassi.png" />
+
+                    </div>
+                </div>
+                <div fxFlex.gt-xs="13" class="logo-area logo-area-small tb-color-bg--green-300">
+                    <img class="tb-image image" src="assets/img/logos/sensify.png" />
+
+                </div>
             </div>
 
             <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>

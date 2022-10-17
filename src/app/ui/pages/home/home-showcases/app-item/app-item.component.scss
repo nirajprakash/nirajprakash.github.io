@@ -1,3 +1,18 @@
+@function hexToCssRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+}
+
+@function color($color-name) {
+    @return var(--#{$color-name});
+}
+
+:host {
+    --app-primary: blue;
+    --app-primary--rgb: #{hexToCssRGB(#0000ff)};
+    // --app-secondary:green;
+}
+
+
 .main {
     margin: 8px 0px;
 
@@ -19,7 +34,7 @@
 
     .image-area {
         // max-height: 63vh;
-        height: 264px;
+        height: 360px;
         // max-height: 24vh;
 
         display: flex;
@@ -33,7 +48,7 @@
             max-width: 100%;
             box-sizing: border-box;
 
-            border: 8px solid white;
+            border: 2px solid var(--app-primary);
             box-shadow: 0px 40px 80px -20px rgba(0, 0, 0, 0.2);
 
             // filter: drop-shadow(30px 20px 20px rgba(0, 0, 0, 0.2));
@@ -43,6 +58,11 @@
     &.sm {
         .content {
             // padding: 24px 24px;
+        }
+
+        .image-area {
+            // max-height: 63vh;
+            height: 300px;
         }
     }
 

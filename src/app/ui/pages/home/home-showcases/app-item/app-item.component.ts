@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { UiUtilsColor } from 'src/app/ui/utils/color.utils';
 
 @Component({
   selector: 'app-app-item',
@@ -7,6 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AppItemComponent implements OnInit {
 
+  // private _mColorPrimary: string = '#FF0D4F';
+  
+  
   @Input('name') set name(data: string){
     if(data){
       this._mName = data;
@@ -32,7 +36,7 @@ export class AppItemComponent implements OnInit {
     }
   }
 
-  @Input('color') set color(data: string) {
+  @Input('color') set color(data: string | undefined) {
     if (data) {
       this._mColor = data 
     }
@@ -41,10 +45,22 @@ export class AppItemComponent implements OnInit {
   _mAppUrl: string  = ""
   _mName: string = ""
   _mImage?: string
-  _mColor?: string 
+  _mColor: string = '#FFFFFF';
 
-  constructor() { }
+  constructor(public el: ElementRef) { }
+
 
   ngOnInit(): void {
+    this.bindColor();
   }
+
+  bindColor() {
+    var element = this.el.nativeElement
+    element.style.setProperty('--app-primary', this._mColor);
+    element.style.setProperty('--app-primary--rgb', UiUtilsColor.hexToRgb( this._mColor));
+    
+    // element.style.setProperty('--app-secondary', this._mColorSecondary);
+    // element.style.setProperty('--app-secondary--rgb', UiUtilsColor.hexToRgb( this._mColorSecondary));
+  }
+
 }

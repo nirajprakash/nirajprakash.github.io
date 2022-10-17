@@ -28,11 +28,17 @@
                     <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
 
                     <p [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}"
-                        class="current-typo--body1-medium tb-color--black-38">I’m an app developer and UI/UX designer
-                        experienced in making products for android and web.</p>
-                    <p [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}"
-                        class="current-typo--body1-medium tb-color--black-38">I have built over 30+ products in last 5
-                        years.</p>
+                        class="current-typo--body1-medium tb-color--black-54">In 2011, I became interested in making
+                        <span class="tb-color--black">Android apps</span> when I was creating an Android-controlled Bluetooth interface for a home automation
+                        project. Since then, I have made over <span class="tb-color--black">20+ Android apps</span> and <span class="tb-color--black">15+ webapps</span>.</p>
+                        <div ngClass.gt-sm="tb-height--12" ngClass.sm="tb-height--8" ngClass.xs="tb-height--6"></div>
+
+                    <p [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}"
+                        class="current-typo--body1-medium tb-color--black-54">My objective is to make development as easy as possible with simple and beautiful designs and organised code
+                        patterns.</p>
+                    <!-- <p [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}"
+                        class="current-typo--body1-medium tb-color--black-54">I have built over 30+ products in last 5
+                        years.</p> -->
 
                     <div ngClass.gt-sm="tb-height--56" ngClass.sm="tb-height--46" ngClass.xs="tb-height--32"></div>
 
@@ -44,7 +50,7 @@
                         </div>
 
                         <div fxFlex fxLayout="column" fxLayoutGap="12" fxLayoutAlign="start start">
-                            <h2 class="title current-typo--h3-light">30+</h2>
+                            <h2 class="title current-typo--h3-light">40+</h2>
                             <h4 class="title current-typo--h6">Projects Completed</h4>
 
                         </div>
@@ -105,7 +111,7 @@
 
                         </div>
 
-                        <div class="btn-area-hire">
+                        <!-- <div class="btn-area-hire">
 
                             <a mat-ripple class="unlink btn-hire tb-color-bg--white" fxLayout="row"
                                 fxLayoutAlign="center center"
@@ -116,15 +122,15 @@
                                 </p>
                             </a>
 
-                        </div>
+                        </div> -->
 
                     </div>
 
                 </div>
-                <div  fxFlex.xs="none" fxFlex
-                    [fxFlexOrder.xs]="1" [fxFlexOrder]=' 2' 
-                     class="image-container" fxLayout="column" fxLayoutAlign="center stretch">
-                    <div [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 800}}" class="tb-text--align-center image-area" #imageAreaView>
+                <div fxFlex.xs="none" fxFlex [fxFlexOrder.xs]="1" [fxFlexOrder]=' 2' class="image-container"
+                    fxLayout="column" fxLayoutAlign="center stretch">
+                    <div [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 800}}"
+                        class="tb-text--align-center image-area" #imageAreaView>
                         <img class="image tb-position--relative" src="assets/img/pic_profile.png" />
                     </div>
 
