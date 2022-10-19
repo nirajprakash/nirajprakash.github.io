@@ -138,14 +138,14 @@ export class HomeShowcasesComponent implements OnInit {
    {
      "id": "5132",
      "name": "WhichOne Shop: Amazon Flipkart",
-     "image": "assets/img/tools/ps.png",
+     "image": "assets/img/clients/whichone.png",
      "link": "https://play.google.com/store/apps/details?id=com.whichone",
      "tab": "Flutter"
    },
    {
      "id": "5133",
      "name": "Aabboo - Anonymous Chat Rooms",
-     "image": "assets/img/tools/ai.svg",
+     "image": "assets/img/clients/aabboo.png",
      "link": "https://play.google.com/store/apps/details?id=com.aabboo.social",
      "tab": "Android"
    }
