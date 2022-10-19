@@ -1,6 +1,6 @@
 import { ScrollDispatcher, ViewportRuler } from '@angular/cdk/scrolling';
 import { ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
-import { MediaObserver } from '@angular/flex-layout';
+import { MediaChange, MediaObserver } from '@angular/flex-layout';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ReplaySubject, takeUntil, startWith, map, scan, distinctUntilChanged, takeWhile, switchMap, Observable } from 'rxjs';
 import { TRANSITION_TEXT, TRANSITION_IMAGE_SCALE } from 'src/app/ui/animations/transitions/transitions.constants';
@@ -17,8 +17,14 @@ import { UiUtilsView } from 'src/app/ui/utils/views.utils';
 })
 export class HomeShowcasesComponent implements OnInit {
 
+   readonly ICONS_2: string = "assets/img/icons/icon_set_2.png" 
+   readonly ICONS_2_XS = "assets/img/icons/icon_set_2_xs.png" 
+  
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
   mOnceAnimated = false
+
+  _mIcon2 = "assets/img/icons/icon_set_2.png"
+
 
   /* ********************************************************************************************
     *                anims
@@ -38,7 +44,22 @@ export class HomeShowcasesComponent implements OnInit {
     public mediaObserver: MediaObserver,
     private scroll: ScrollDispatcher, private viewPortRuler: ViewportRuler,
     private formBuilder: FormBuilder) {
+      this.mediaObserver.asObservable().subscribe((mediaChange: MediaChange[]) => {
 
+        if (mediaChange.length > 0) {
+  
+          if (mediaChange[0].mqAlias == "xs") {
+            // console.log("changes: ", mediaChange);
+            this._mIcon2 = this.ICONS_2_XS
+  
+          }else{
+            this._mIcon2 = this.ICONS_2
+  
+          }
+        }
+  
+        // this.opened = this.getOpened(mediaChange);
+      });
     
 
   }
