@@ -1,0 +1,28 @@
+<div class="tb-position--relative main current" fxLayout="column" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+
+
+    <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--24"></div>
+
+    <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" fxLayout="row" fxLayoutAlign="start end">
+        <h4 class="section-title current-typo--h4 tb-flex--shrink-0">Icons.</h4>
+        <div class="tb-width--12"></div>
+        <div fxFlex="60" class="line tb-color-bg--black"></div>
+        <div fxFlex class=""></div>
+    </div>
+    <div ngClass.gt-xs="tb-height--56" ngClass.xs="tb-height--20"></div>
+
+    <div [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 300}}" class="icon-area-full tb-color-bg--white"></div>
+    <div class="tb-height--12"></div>
+    <div class="" fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="12">
+        <div [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 400}}" fxFlex.gt-xs="65" fxFlex.xs="none" class="icon-area-full tb-color-bg--green-300">
+
+            <img class="tb-image image" [src]="_mIcon2" />
+        </div>
+        <div [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 500}}" fxFlex.gt-xs="35" fxFlex.xs="none" class="icon-area-full tb-color-bg--blue-300">
+            <img class="tb-image image" src="assets/img/icons/icon_set_1.png" />
+        </div>
+
+    </div>
+
+    <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
+</div>

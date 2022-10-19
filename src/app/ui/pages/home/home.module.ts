@@ -20,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeShowcasesComponent } from './home-showcases/home-showcases.component';
 import { AppItemComponent } from './home-showcases/app-item/app-item.component';
+import { IconsComponent } from './home-showcases/icons/icons.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AppItemComponent } from './home-showcases/app-item/app-item.component';
     TechItemComponent,
     HomeContactComponent,
     HomeShowcasesComponent,
-    AppItemComponent
+    AppItemComponent,
+    IconsComponent
   ],
   imports: [
     CommonModule,

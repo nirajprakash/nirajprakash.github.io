@@ -2,7 +2,7 @@ import { ScrollDispatcher, ViewportRuler } from '@angular/cdk/scrolling';
 import { ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { MediaObserver } from '@angular/flex-layout';
 import { ReplaySubject, takeUntil, startWith, map, scan, distinctUntilChanged, takeWhile, switchMap, Observable } from 'rxjs';
-import { TRANSITION_TEXT } from 'src/app/ui/animations/transitions/transitions.constants';
+import { TRANSITION_IMAGE_SCALE, TRANSITION_TEXT } from 'src/app/ui/animations/transitions/transitions.constants';
 import { UiUtilsView } from 'src/app/ui/utils/views.utils';
 
 @Component({
@@ -10,7 +10,8 @@ import { UiUtilsView } from 'src/app/ui/utils/views.utils';
   templateUrl: './home-expertise.component.html',
   styleUrls: ['./home-expertise.component.scss'],
   animations: [
-    TRANSITION_TEXT
+    TRANSITION_TEXT,
+    TRANSITION_IMAGE_SCALE
   ]
 })
 export class HomeExpertiseComponent implements OnInit {

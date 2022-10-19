@@ -44,7 +44,7 @@
             </div>
             <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
 
-            <div fxLayout="row wrap"  fxLayoutGap="16" fxLayoutGap.xs="8">
+            <div  [@transitionImageScale]="{value:_mTriggerAnim, params: {animDelay: 600}}" fxLayout="row wrap"  fxLayoutGap="16" fxLayoutGap.xs="8">
 
                 <ng-container *ngFor="let tool of _mTools">
 
