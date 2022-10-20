@@ -18,11 +18,13 @@ import { UiUtilsView } from 'src/app/ui/utils/views.utils';
 export class IconsComponent implements OnInit {
   readonly ICONS_2: string = "assets/img/icons/icon_set_2.png"
   readonly ICONS_2_XS = "assets/img/icons/icon_set_2_xs.png"
+  readonly ICONS_3: string = "assets/img/icons/icon_set_3.png"
+  readonly ICONS_3_XS = "assets/img/icons/icon_set_3_xs.png"
   mOnceAnimated = false
 
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
   _mIcon2 = "assets/img/icons/icon_set_2.png"
-
+  _mIcon3 = "assets/img/icons/icon_set_3.png"
   /* ********************************************************************************************
   *                anims
   */
@@ -48,9 +50,10 @@ export class IconsComponent implements OnInit {
         if (mediaChange[0].mqAlias == "xs") {
           // console.log("changes: ", mediaChange);
           this._mIcon2 = this.ICONS_2_XS
-
+          this._mIcon3 = this.ICONS_3_XS
         } else {
           this._mIcon2 = this.ICONS_2
+          this._mIcon3 = this.ICONS_3
 
         }
       }
