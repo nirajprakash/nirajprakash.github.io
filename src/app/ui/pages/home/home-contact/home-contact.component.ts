@@ -66,7 +66,7 @@ export class HomeContactComponent implements OnInit {
     this._mFormGroup = this.formBuilder.group({
       // purpose: [''],
       name: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', Validators.email],
       details: ['', Validators.required],
     });
 
@@ -79,6 +79,7 @@ export class HomeContactComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.setupAnimation();
+    // this.openSuccess()
   }
 
   ngOnDestroy(): void {
@@ -120,7 +121,8 @@ export class HomeContactComponent implements OnInit {
       time = new Date().valueOf();
       // console.log("time2: ", time);
       console.log("value from resolved:", token);
-      // this.addContact(value);
+      this.addContact(value);
+      
     } else {
       this.closeProgress();
     }
@@ -256,16 +258,19 @@ export class HomeContactComponent implements OnInit {
   }
 
   openSuccess() {
-    this._mInProgress = true;
 
     this.mDialogSuccessRef = this.dialog.open(DialogSuccessComponent, {
       data: {},
       disableClose: false
     });
+    setTimeout(() => {
+      this.closeSuccess()
+
+
+    }, 4000);
   }
 
   closeSuccess() {
-    this._mInProgress = false;
     if (this.mDialogSuccessRef) this.mDialogSuccessRef.close();
   }
 

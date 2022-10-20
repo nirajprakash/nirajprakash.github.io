@@ -20,7 +20,7 @@ export class ApiConstants {
   
     contact() {
         return {
-            contacts: '/contacts',
+            contacts: '/contact',
         }
     }
 
