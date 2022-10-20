@@ -21,7 +21,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeShowcasesComponent } from './home-showcases/home-showcases.component';
 import { AppItemComponent } from './home-showcases/app-item/app-item.component';
 import { IconsComponent } from './home-showcases/icons/icons.component';
+import { SuccessModule } from '../../common/success/success.module';
+import { ProgressModule } from '../../common/progress/progress.module';
 
+import { RecaptchaModule, RecaptchaV3Module, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
+import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -47,7 +51,15 @@ import { IconsComponent } from './home-showcases/icons/icons.component';
     
     MatFormFieldModule,
     MatInputModule,
-    
-  ]
+    ProgressModule,
+    RecaptchaV3Module,
+    SuccessModule
+  ],
+  providers: [
+    {
+      provide: RECAPTCHA_V3_SITE_KEY,
+      useValue: environment.recaptcha
+    }
+  ],
 })
 export class HomeModule { }

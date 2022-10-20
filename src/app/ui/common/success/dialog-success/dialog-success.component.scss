@@ -1,0 +1,11 @@
+.main {
+    transform: translateY(5vh);
+  }
+  .social :hover {
+    color: #2680eb;
+  }
+  .main {
+    &.xs {
+    }
+  }
+  
