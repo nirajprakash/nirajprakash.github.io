@@ -12,21 +12,21 @@
 ## Features 📋
 ⚡️ Fully Responsive\
 ⚡️ Valid HTML5 & CSS3\
-⚡️ Angular Material animations
-⚡️ Flex Layout Usage
-⚡️ Easy to modify
+⚡️ Angular Material animations\
+⚡️ Flex Layout Usage\
+⚡️ Easy to modify\
 
 ## Sections 📚
 ✔️ About\
-✔️ ShowCases \ Clients Projects, Icons, Logos
+✔️ ShowCases : Clients Projects, Icons, Logos \
 ✔️ Expertise \
 ✔️ Tech Stack \
-✔️ Contact
+✔️ Contact \
 
 ## Running Locally
 
 ```bash
-$ git clone https://github.com/braydoncoyer/braydoncoyer.dev.git
+$ git clone https://github.com/nirajprakash/nirajprakash.github.io.git
 $ cd braydoncoyer.dev
 $ npm install
 $ ng serve
