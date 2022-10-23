@@ -55,6 +55,9 @@
         }
     }
 
+    
+      
+
     &.sm {
         .content {
             // padding: 24px 24px;
@@ -82,3 +85,7 @@
         }
     }
 }
+
+.unlink{
+    text-decoration: unset;
+  }
