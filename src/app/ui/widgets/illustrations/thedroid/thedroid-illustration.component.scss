@@ -1,0 +1,19 @@
+:host{
+    height: 100%;
+    width: 100%;
+}
+svg {
+    // color: var(--color-primary);
+    height: 100%;
+    width: 100%;
+    // vertical-align: top;
+    // fill: currentColor;
+    overflow: visible;
+}
+.blur {
+    // border-radius: 50%;
+
+    opacity: 0.35;
+    -webkit-filter: blur(1rem);
+    filter: blur(1rem);
+}

@@ -26,6 +26,7 @@ import { ProgressModule } from '../../common/progress/progress.module';
 
 import { RecaptchaModule, RecaptchaV3Module, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
 import { environment } from 'src/environments/environment';
+import { IllustrationModule } from '../../widgets/illustrations/illustration.module';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -53,7 +54,8 @@ import { environment } from 'src/environments/environment';
     MatInputModule,
     ProgressModule,
     RecaptchaV3Module,
-    SuccessModule
+    SuccessModule,
+    IllustrationModule
   ],
   providers: [
     {

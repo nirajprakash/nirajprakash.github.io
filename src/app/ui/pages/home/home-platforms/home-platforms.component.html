@@ -19,40 +19,51 @@
 
 
             <!-- card junkielabs -->
-            <a [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}" class="tb-position--relative card tb-color-bg--black-4 unlink" 
-            href="https://junkielabs.in" target="_blank">
+            <a [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}"
+                class="junkie-section tb-position--relative card tb-color-bg--black-4 unlink"
+                href="https://junkielabs.in" target="_blank">
 
 
                 <div class="ribbon ribbon-top-right"><span class="current-typo--h5">Open Source</span></div>
 
-                <div class="card-content tb-position--relative" fxLayout="row" fxLayout.xs="column">
+                <div class="card-content tb-position--relative" fxLayout="row" fxLayout.xs="column"
+                    fxLayoutAlign="start center">
 
 
-                    <div fxFlex="70" class="tb-position--relative" ngClass.gt-xs="tb-padding--right-16"
+                    <div fxFlex="50" class="tb-position--relative" ngClass.gt-xs="tb-padding--right-16"
                         ngClass.xs="tb-padding--bottom-24" fxLayout="column">
-                        <div class="tb-height--32">
+                        <div class="tb-height--12"></div>
+                        <div class="tb-height--48">
                             <img class="tb-image" src="assets/img/logos/junkielabs.png">
                         </div>
                         <div class="tb-height--12"></div>
 
-                        <h3 class="current-typo--h4 tb-color--black">JunkieLabs</h3>
+                        <h3 class="tb-font-weight--medium tb-color--black" ngClass.xs="current-typo--h2-medium" ngClass.sm="current-typo--h3-medium " ngClass.gt-sm="current-typo--h2-medium">JunkieLabs</h3>
                         <div class="tb-height--12"></div>
-                        <p class="current-typo--body1 tb-color--black-54">An Open Source Initiative to help those who
+                        <p class="current-typo--body1 tb-color--black-75">An Open Source Initiative to help those who
                             need a good and common pattern to make app from scratch</p>
+                        <div class="tb-height--20"></div>
+                        <a fxFlexAlign="start" class="btn-junkielab-area" href="https://junkielabs.in" target="_blank">
+                            <button mat-raised-button color="primary"><span class="current-typo--button-medium">Explore
+                                    Now.</span></button>
+
+                        </a>
+                        <div class="tb-height--12"></div>
 
 
                     </div>
 
                     <div class="card-image-area" fxFlex.xs="none" fxFlex fxLayoutAlign="start center" fxLayout="column">
+                        <app-junkielabs-illustration></app-junkielabs-illustration>
 
-                        <img class="image tb-position--relative" src="assets/img/illustrations/pic_junkielabs.png">
-
-                    </div>
-
-                    <div fxFlex fxFlex.xs="none" class="card-empty-space tb-width--76">
-
+                        <!-- <img class="image tb-position--relative" src="assets/img/illustrations/pic_junkielabs.png"> -->
 
                     </div>
+
+                    <!-- <div fxFlex fxFlex.xs="none" class="card-empty-space tb-width--76">
+
+
+                    </div> -->
 
 
 
@@ -63,14 +74,16 @@
             <div ngClass.gt-xs="tb-height--32" ngClass.xs="tb-height--20"></div>
 
             <!-- card thedroid -->
-            <a [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}" class="tb-position--relative card tb-color-bg--white current-elevation--2 unlink" 
-            href="https://thedroid.io" target="_blank">
-                <div class="card-backgrond tb-position--absolute tb-height--full tb-width--full" fxLayout="row" fxLayout.xs="column">
-                
+            <a [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}"
+                class="tb-position--relative card tb-color-bg--white current-elevation--2 unlink"
+                href="https://thedroid.io" target="_blank">
+                <div class="card-backgrond tb-position--absolute tb-height--full tb-width--full" fxLayout="row"
+                    fxLayout.xs="column">
+
                     <div class="overlay"></div>
                     <img class="tb-image tb-position--relative" src="assets/img/illustrations/pic_thedroid.png">
                     <div class="card-outline"></div>
-                  
+
                 </div>
 
 
@@ -79,7 +92,7 @@
                 <div class="card-content tb-position--relative" fxLayout="row" fxLayout.xs="column">
 
 
-                    <div fxFlex="70" class="tb-position--relative" ngClass.gt-xs="tb-padding--right-16"
+                    <div fxFlex="50" class="tb-position--relative" ngClass.gt-xs="tb-padding--right-16"
                         ngClass.xs="tb-padding--bottom-24" fxLayout="column">
                         <div class="tb-height--32">
                             <img class="tb-image" src="assets/img/logos/thedroid_logo.png">
@@ -94,16 +107,19 @@
 
                     </div>
 
+                    <div class="card-image-area" fxFlex.xs="none" fxFlex fxLayoutAlign="start center" fxLayout="column">
+                        <app-thedroid-illustration></app-thedroid-illustration>
+
+                        <!-- <img class="image tb-position--relative" src="assets/img/illustrations/pic_junkielabs.png"> -->
+
+                    </div>
+
                     <!-- <div class="card-image-area" fxFlex.xs="none" fxFlex fxLayoutAlign="start center" fxLayout="column">
 
                         <img class="image tb-position--relative" src="assets/img/illustrations/pic_junkielabs.png">
 
                     </div> -->
 
-                    <div fxFlex fxFlex.xs="none" class="card-empty-space tb-width--76">
-
-
-                    </div>
 
 
 
