@@ -1,11 +1,32 @@
 .main {
     // overflow-x: hidden;
+    --color-secondary-light: #CBC8FF;
+    --color-secondary-light--rgb: #{hexToCssRGB(#cbc8ff)};
+    --color-secondary: #8A86E8;
+    --color-secondary--rgb: #{hexToCssRGB(#8A86E8)};
+    --color-shadow--rgb: #{hexToCssRGB(#6e68e7)};
 
+    &.sm {
+        .card-content {
+            padding: 28px 48px;
+        }
+    }
 
-    &.xs{
+    &.xs {
+        .card-content {
+            padding: 20px 32px;
+        }
+
         .card-image-area {
-
             width: 100%;
+            .image {
+                position: relative;
+            }
+        }
+
+        .card-empty-space {
+            // min-width: 48px;
+            min-height: 24px;
         }
     }
 
@@ -13,12 +34,15 @@
         box-sizing: border-box;
         padding: 0px 20px;
     }
-    .card{
-        
+    .card {
         border-radius: 4px;
     }
-    .junkie-section{
+    .junkie-section {
         background-color: #fbfafa;
+    }
+
+    .thedroid-section {
+        background-color: #e8e8f4;
     }
 
     .card-content {
@@ -75,26 +99,33 @@
     .card-backgrond {
         z-index: 0;
         position: absolute;
-        height: 100%;
-        width: 100%;
+        // height: 100%;
+        left: 4%;
+        right: 4%;
+        bottom: 4%;
 
-        .overlay{
+        .overlay {
             z-index: 1;
             position: absolute;
             height: 100%;
             border-radius: 4px;
             width: 100%;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0.3) 100%);
-        
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(255, 255, 255, 0.9) 75%,
+                rgba(255, 255, 255, 0.3) 100%
+            );
         }
         .tb-image {
             z-index: 0;
-            height: 100%;
+            max-height: 100%;
+            height: auto;
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 4px;
         }
-        .card-outline{
+        .card-outline {
             position: absolute;
             width: 90%;
             bottom: -8px;
@@ -110,26 +141,47 @@
         min-width: 48px;
     }
 
-    &.sm {
-        .card-content {
-            padding: 28px 48px;
+    .btn-junkielab-area {
+        // z-index: 2;
+        position: relative;
+
+        > * {
+            z-index: 2;
+        }
+
+        &::after {
+            // z-index: -1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 4px;
+            left: 4px;
+            border: solid 1px #000000;
+            border-radius: 4px;
+            content: "";
         }
     }
 
-    &.xs {
-        .card-content {
-            padding: 20px 32px;
-        }
+    .unlink {
+        text-decoration: unset;
+    }
 
-        .card-image-area {
-            .image {
-                position: relative;
-            }
-        }
+    .btn-thedroid-area {
+        position: relative;
+    }
 
-        .card-empty-space {
-            // min-width: 48px;
-            min-height: 24px;
+    .thedroid-button {
+        --Select-focusedHighlight: var(var(--color-secondary));
+        padding: 0.8rem 3.2rem;
+        border-radius: 3rem;
+        background-color: unset;
+        background: linear-gradient(180deg, var(--color-secondary-light) 0%, var(--color-secondary) 100%);
+        // var(--color-secondary)
+        color: rgba($color: #000000, $alpha: 0.75);
+        // transition: box-shadow 0.3s ease;
+        // box-shadow: resolve-box-shadow(1, color(color-secondary--rgb), color(color-secondary--rgb), 0.5);
+        &:hover {
+            // box-shadow: resolve-box-shadow(2, color(color-secondary--rgb), color(color-secondary--rgb), 0.5);
         }
     }
 }
@@ -156,7 +208,7 @@
         width: 225px;
         padding: 8px 0;
         z-index: 4;
-        background-color: #91F2FF;
+        background-color: #91f2ff;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         color: #000;
         // font: 700 18px/1 'Lato', sans-serif;
@@ -202,32 +254,6 @@
     }
 }
 
-.btn-junkielab-area {
-    // z-index: 2;
-    position: relative;
-
-    > * {
-        z-index: 2;
-    }
-
-    &::after {
-        // z-index: -1;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 4px;
-        left: 4px;
-        border: solid 1px #000000;
-        border-radius: 4px;
-        content: "";
-    }
-}
-
-.unlink{
-    text-decoration: unset;
-  }
-
-  
 // .ribbon-top-right::before,
 // .ribbon-top-right::after {
 
