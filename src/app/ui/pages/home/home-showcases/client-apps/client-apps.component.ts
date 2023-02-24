@@ -1,30 +1,23 @@
 import { ScrollDispatcher, ViewportRuler } from '@angular/cdk/scrolling';
 import { ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
-import { MediaChange, MediaObserver } from '@angular/flex-layout';
-import { FormBuilder, Validators } from '@angular/forms';
-import { ReplaySubject, takeUntil, startWith, map, scan, distinctUntilChanged, takeWhile, switchMap, Observable } from 'rxjs';
+import { MediaObserver, MediaChange } from '@angular/flex-layout';
+import { FormBuilder } from '@angular/forms';
+import { distinctUntilChanged, map, Observable, ReplaySubject, scan, startWith, switchMap, takeUntil, takeWhile } from 'rxjs';
 import { TRANSITION_TEXT, TRANSITION_IMAGE_SCALE } from 'src/app/ui/animations/transitions/transitions.constants';
 import { UiUtilsView } from 'src/app/ui/utils/views.utils';
 
 @Component({
-  selector: 'app-home-showcases',
-  templateUrl: './home-showcases.component.html',
-  styleUrls: ['./home-showcases.component.scss'],
+  selector: 'app-client-apps',
+  templateUrl: './client-apps.component.html',
+  styleUrls: ['./client-apps.component.scss'],
   animations: [
     TRANSITION_TEXT,
     TRANSITION_IMAGE_SCALE
   ]
 })
-export class HomeShowcasesComponent implements OnInit {
-
-   readonly ICONS_2: string = "assets/img/icons/icon_set_2.png" 
-   readonly ICONS_2_XS = "assets/img/icons/icon_set_2_xs.png" 
-  
+export class ClientAppsComponent implements OnInit {
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
   mOnceAnimated = false
-
-  _mIcon2 = "assets/img/icons/icon_set_2.png"
-
 
   /* ********************************************************************************************
     *                anims
@@ -33,7 +26,7 @@ export class HomeShowcasesComponent implements OnInit {
 
 
 
-  _mThreshold = 0.2
+  _mThreshold = 0.4
 
 
   @ViewChild('animRefView') vAnimRefView?: ElementRef<HTMLElement>;
@@ -44,23 +37,8 @@ export class HomeShowcasesComponent implements OnInit {
     public mediaObserver: MediaObserver,
     private scroll: ScrollDispatcher, private viewPortRuler: ViewportRuler,
     private formBuilder: FormBuilder) {
-      this.mediaObserver.asObservable().subscribe((mediaChange: MediaChange[]) => {
 
-        if (mediaChange.length > 0) {
-  
-          if (mediaChange[0].mqAlias == "xs") {
-            // console.log("changes: ", mediaChange);
-            this._mIcon2 = this.ICONS_2_XS
-  
-          }else{
-            this._mIcon2 = this.ICONS_2
-  
-          }
-        }
-  
-        // this.opened = this.getOpened(mediaChange);
-      });
-    
+
 
   }
 
@@ -79,7 +57,7 @@ export class HomeShowcasesComponent implements OnInit {
     this.destroyed$.complete()
   }
 
-  
+
 
 
   /* ***************************************************************************
@@ -140,10 +118,6 @@ export class HomeShowcasesComponent implements OnInit {
     )
   }
 
-  /* ************************************************************************************
-   * 
-   */
-
   _mClientApps = [
 
     {
@@ -171,7 +145,4 @@ export class HomeShowcasesComponent implements OnInit {
      "tab": "Android"
    }
   ];
-
- 
-
 }

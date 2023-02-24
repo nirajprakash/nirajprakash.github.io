@@ -27,6 +27,8 @@ import { ProgressModule } from '../../common/progress/progress.module';
 import { RecaptchaModule, RecaptchaV3Module, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
 import { environment } from 'src/environments/environment';
 import { IllustrationModule } from '../../widgets/illustrations/illustration.module';
+import { MyAppsComponent } from './home-showcases/my-apps/my-apps.component';
+import { ClientAppsComponent } from './home-showcases/client-apps/client-apps.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -39,7 +41,9 @@ import { IllustrationModule } from '../../widgets/illustrations/illustration.mod
     HomeContactComponent,
     HomeShowcasesComponent,
     AppItemComponent,
-    IconsComponent
+    IconsComponent,
+    MyAppsComponent,
+    ClientAppsComponent
   ],
   imports: [
     CommonModule,

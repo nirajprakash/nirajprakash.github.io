@@ -10,39 +10,9 @@
                 ngClass.sm="current-typo--h3-light" ngClass.xs="current-typo--h4">Showcases.</h2>
             <div ngClass.gt-xs="tb-height--48" ngClass.xs="tb-height--20"></div>
 
-            <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" fxLayout="row"
-                fxLayoutAlign="start end">
-                <h4 class="section-title current-typo--h4 tb-flex--shrink-0">Recent Client App.</h4>
-                <div class="tb-width--12"></div>
-                <div fxFlex="60" class="line tb-color-bg--black"></div>
-                <div fxFlex class=""></div>
-            </div>
+            <app-client-apps></app-client-apps>
 
-
-
-            <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
-
-            <p [@transitionText]="{value:_mTriggerAnim,  params: {animDelay: 500}}"
-                class="section-detail tb-color--black-54" ngClass.gt-sm="current-typo--body1"
-                ngClass.sm="current-typo--body1" ngClass.xs="current-typo--body1">
-                Some of the clients apps, which I have made recently in Android and Flutter. For more project please
-                visit
-                <a class="" href="https://www.thedroid.io" target="_blank" matTooltip="thedroid.io">
-                    <span class="tb-color--black">thedroid.io</span>
-                </a>
-            </p>
-
-            <div ngClass.gt-xs="tb-height--40" ngClass.xs="tb-height--20"></div>
-
-            <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap.gt-xs="8"
-                fxLayoutAlign.gt-xs="space-between center" fxLayoutAlign.xs="start stretch">
-                <ng-container *ngFor="let app of _mClientApps">
-
-
-                    <app-app-item [name]="app.name" [link]="app.link" [image]="app.image" [color]="app.color">
-                    </app-app-item>
-                </ng-container>
-            </div>
+          
             <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
 
 
