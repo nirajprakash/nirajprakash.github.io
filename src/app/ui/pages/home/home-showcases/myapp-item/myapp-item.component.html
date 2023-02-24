@@ -1,0 +1,35 @@
+<a class="main tb-position--relative unlink" ngClass.xs="xs" ngClass.sm="sm" [href]="_mAppUrl" target="_blank"
+    fxLayout="column" #animRefView>
+    <div class="background"></div>
+
+    <div fxLayout="column" fxLayoutGap="6" fxLayoutAlign="start stretch" class="content tb-position--relative">
+
+        <!-- <h4 class="current-typo--h5 tb-text-align--center tb-color--black" ngClass.xs="current-typo--h6">{{_mName}}</h4> -->
+
+
+        <div class="image-area">
+            <img class="image" [src]="_mImage">
+        </div>
+        <div ngClass.gt-xs="tb-height--20" ngClass.xs="tb-height--12"></div>
+
+        <div class="tb-padding--24-36" fxLayout="row" fxLayoutAlign="start center" >
+
+            <div fxFlex fxLayout="column" fxLayoutGap="1rem">
+                <h6 class="tb-typo--h6 tb-color--black-54">
+                    In Jetpck Compose -
+                </h6>
+
+                <h6 class="current-typo--h4-bold tb-color--black">
+                    {{_mName}}
+                </h6>
+
+
+            </div>
+            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                <mat-icon svgIcon="arrow"></mat-icon>
+            </button>
+
+        </div>
+
+    </div>
+</a>

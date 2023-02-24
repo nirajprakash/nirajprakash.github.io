@@ -1,0 +1,74 @@
+.main {
+    // overflow-x: hidden;
+    .container {
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+
+    .line {
+        height: 2px;
+    }
+
+    .section-title {
+        line-height: 0.7;
+    }
+
+    .section-detail{
+        width: 70%;
+    }
+
+   
+    .logos-area{
+        height: 500px;
+
+        .image{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    .logo-area-row{
+        height: 60%;      
+    }
+
+    .logo-area-small{
+        height: 35%;
+    }
+
+    .logo-area-large{
+        height: 100%;
+    }
+
+    &.sm{
+       
+        .logos-area{
+            height: 340px;
+        }
+
+        .icon-area-full{
+            height: 264px;
+        }
+        // .logos-area{
+        //     height: 400px;
+        // }
+    
+        // .logo-area-row{
+        //     height: 264px;      
+        // }
+    
+        // .logo-area-small{
+        //     height: 100px;
+        // }
+    
+        // .logo-area-large{
+        //     height: 300px;
+        // }
+    }
+
+    &.xs{
+    
+    }
+
+}

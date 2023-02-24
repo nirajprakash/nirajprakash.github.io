@@ -29,6 +29,7 @@ import { environment } from 'src/environments/environment';
 import { IllustrationModule } from '../../widgets/illustrations/illustration.module';
 import { MyAppsComponent } from './home-showcases/my-apps/my-apps.component';
 import { ClientAppsComponent } from './home-showcases/client-apps/client-apps.component';
+import { MyappItemComponent } from './home-showcases/myapp-item/myapp-item.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -43,7 +44,8 @@ import { ClientAppsComponent } from './home-showcases/client-apps/client-apps.co
     AppItemComponent,
     IconsComponent,
     MyAppsComponent,
-    ClientAppsComponent
+    ClientAppsComponent,
+    MyappItemComponent
   ],
   imports: [
     CommonModule,

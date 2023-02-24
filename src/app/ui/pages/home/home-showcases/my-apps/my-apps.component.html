@@ -1,9 +1,34 @@
-<p>my-apps works!</p>
-<!-- <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" fxLayout="row"
-fxLayoutAlign="start end">
-<h4 class="section-title current-typo--h4 tb-flex--shrink-0">Recent Client App.</h4>
-<div class="tb-width--12"></div>
-<div fxFlex="60" class="line tb-color-bg--black"></div>
-<div fxFlex class=""></div>
+<div class="tb-position--relative main current" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+    <div fxLayout="column" fxLayoutAlign="start stretch">
+        <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" fxLayout="row" fxLayoutAlign="start end">
+            <h4 class="section-title current-typo--h4 tb-flex--shrink-0">My Apps.</h4>
+            <div class="tb-width--12"></div>
+            <div fxFlex="60" class="line tb-color-bg--black"></div>
+            <div fxFlex class=""></div>
+        </div>
+
+
+
+        <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
+
+        <!-- <p [@transitionText]="{value:_mTriggerAnim,  params: {animDelay: 500}}"
+            class="section-detail tb-color--black-54" ngClass.gt-sm="current-typo--body1"
+            ngClass.sm="current-typo--body1" ngClass.xs="current-typo--body1">
+            Some of the clients apps, which I have made recently in Android and Flutter. For more project please
+            visit
+            <a class="" href="https://www.thedroid.io" target="_blank" matTooltip="thedroid.io">
+                <span class="tb-color--black">thedroid.io</span>
+            </a>
+        </p> -->
+
+        <div ngClass.gt-xs="tb-height--40" ngClass.xs="tb-height--20"></div>
+
+        <div fxLayout.gt-sm="row wrap" fxLayout.lt-md="column" fxLayoutGap="16" fxLayoutAlign.gt-sm="space-between center"
+            fxLayoutAlign.lt-md="start stretch">
+            <ng-container *ngFor="let app of _mApps">
+                <app-myapp-item fxFlex.gt-sm="calc( 50% - 12px )" fxFlex.lt-md="none"  [name]="app.name" [link]="app.link" [image]="app.image" [color]="app.color">
+                </app-myapp-item>
+            </ng-container>
+        </div>
+    </div>
 </div>
- -->

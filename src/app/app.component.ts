@@ -51,6 +51,8 @@ export class AppComponent {
 
       // .addSvgIcon('facebook',
       //   sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/facebook.svg'))
+      .addSvgIcon('arrow',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/arrow_top_right.svg'))
 
       .addSvgIcon('dribble',
         sanitizer.bypassSecurityTrustResourceUrl('assets/svg/icons/social/dribble.svg'))
