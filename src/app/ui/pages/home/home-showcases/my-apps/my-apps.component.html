@@ -26,7 +26,7 @@
         <div fxLayout.gt-sm="row wrap" fxLayout.lt-md="column" fxLayoutGap="16" fxLayoutAlign.gt-sm="space-between center"
             fxLayoutAlign.lt-md="start stretch">
             <ng-container *ngFor="let app of _mApps">
-                <app-myapp-item fxFlex.gt-sm="calc( 50% - 12px )" fxFlex.lt-md="none"  [name]="app.name" [link]="app.link" [image]="app.image" [color]="app.color">
+                <app-myapp-item fxFlex.gt-sm="calc( 50% - 12px )" fxFlex.lt-md="none"  [name]="app.name" [link]="app.link" [image]="app.image" [caption]="app.caption" [background]="app.background" [primary]="app.primary">
                 </app-myapp-item>
             </ng-container>
         </div>

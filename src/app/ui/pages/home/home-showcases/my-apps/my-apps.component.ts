@@ -26,14 +26,18 @@ export class MyAppsComponent implements OnInit {
      "image": "assets/img/apps/sensify.webp",
      "link": "https://play.google.com/store/apps/details?id=io.sensify.sensor",
      "tab": "Android",
-     "color": "#FFFFFF"
+     "caption": "In Jetpack Compose -",
+     "primary":"#3FD67D",
+     "background":"#E1E1E1"
    },
    {
      "id": "5132",
      "name": "Taru: Plant Finder & Weather",
      "image": "assets/img/apps/taru.webp",
      "link": "https://play.google.com/store/apps/details?id=com.taru",
-     "tab": "Android"
+     "tab": "Android",
+     "caption": "In Android -",
+     "background":"#F5E7B4"
    }
   ];
 

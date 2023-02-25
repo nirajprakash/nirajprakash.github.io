@@ -1,6 +1,6 @@
 <a class="main tb-position--relative unlink" ngClass.xs="xs" ngClass.sm="sm" [href]="_mAppUrl" target="_blank"
     fxLayout="column" #animRefView>
-    <div class="background"></div>
+    <div class="background" [ngStyle]="{background: _mBackground}"></div>
 
     <div fxLayout="column" fxLayoutGap="6" fxLayoutAlign="start stretch" class="content tb-position--relative">
 
@@ -12,11 +12,11 @@
         </div>
         <div ngClass.gt-xs="tb-height--20" ngClass.xs="tb-height--12"></div>
 
-        <div class="tb-padding--24-36" fxLayout="row" fxLayoutAlign="start center" >
+        <div class="tb-padding--24-36" ngClass.xs="tb-padding--12-20" fxLayout="row" fxLayoutAlign="start center">
 
-            <div fxFlex fxLayout="column" fxLayoutGap="1rem">
+            <div fxFlex fxLayout="column" fxLayoutGap="0.6rem">
                 <h6 class="tb-typo--h6 tb-color--black-54">
-                    In Jetpck Compose -
+                    {{_mCaption}}
                 </h6>
 
                 <h6 class="current-typo--h4-bold tb-color--black">
@@ -25,9 +25,9 @@
 
 
             </div>
-            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+            <div class="icon-area" [class.icon-outline]="!_mPrimary" [ngStyle]="_mPrimary ? {background:_mPrimary} : {}">
                 <mat-icon svgIcon="arrow"></mat-icon>
-            </button>
+            </div>
 
         </div>
 
