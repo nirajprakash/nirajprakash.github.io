@@ -3,6 +3,7 @@ import { ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, ViewChild } f
 import { MediaObserver } from '@angular/flex-layout';
 import { FormBuilder } from '@angular/forms';
 import { ReplaySubject, takeUntil, startWith, map, scan, distinctUntilChanged, takeWhile, switchMap, Observable } from 'rxjs';
+import { AppType } from 'src/app/types/apps_type';
 import { TRANSITION_IMAGE_SCALE, TRANSITION_TEXT } from 'src/app/ui/animations/transitions/transitions.constants';
 import { UiUtilsView } from 'src/app/ui/utils/views.utils';
 
@@ -18,7 +19,7 @@ import { UiUtilsView } from 'src/app/ui/utils/views.utils';
 export class MyAppsComponent implements OnInit {
 
 
-  _mApps = [
+  _mApps : AppType[] = [
 
     {
      "id": "5131",
@@ -27,6 +28,7 @@ export class MyAppsComponent implements OnInit {
      "link": "https://play.google.com/store/apps/details?id=io.sensify.sensor",
      "tab": "Android",
      "caption": "In Jetpack Compose -",
+     "isFull": false,
      "primary":"#3FD67D",
      "background":"#E1E1E1"
    },
@@ -36,8 +38,19 @@ export class MyAppsComponent implements OnInit {
      "image": "assets/img/apps/taru.webp",
      "link": "https://play.google.com/store/apps/details?id=com.taru",
      "tab": "Android",
+     "isFull": false,
      "caption": "In Android -",
      "background":"#F5E7B4"
+   },
+   {
+     "id": "5133",
+     "name": "Hundi: Record Book",
+     "image": "assets/img/apps/hundi.webp",
+     "link": "https://play.google.com/store/apps/details?id=com.hundi.social",
+     "tab": "Android",
+     "caption": "In Flutter -",
+     "isFull": true,
+     "background":"#3CE79F"
    }
   ];
 

@@ -23,10 +23,10 @@
 
         <div ngClass.gt-xs="tb-height--40" ngClass.xs="tb-height--20"></div>
 
-        <div fxLayout.gt-sm="row wrap" fxLayout.lt-md="column" fxLayoutGap="16" fxLayoutAlign.gt-sm="space-between center"
+        <div fxLayout.gt-sm="row wrap" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="space-between center"
             fxLayoutAlign.lt-md="start stretch">
             <ng-container *ngFor="let app of _mApps">
-                <app-myapp-item fxFlex.gt-sm="calc( 50% - 12px )" fxFlex.lt-md="none"  [name]="app.name" [link]="app.link" [image]="app.image" [caption]="app.caption" [background]="app.background" [primary]="app.primary">
+                <app-myapp-item class="tw-mt-4 tw-mx-2"  [fxFlex.gt-sm]="app.isFull ? 'calc( 100% - 1rem )' : 'calc( 50% - 1rem )'" fxFlex.lt-md="none"  [data]="app">
                 </app-myapp-item>
             </ng-container>
         </div>
